@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A1300ABC76A49A9065438CA /* Pods_DLParser_DLParser_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE37C0777E29525C650199 /* Pods_DLParser_DLParser_Example.framework */; };
+		851BE1DF2094D22D00DF3684 /* Pods_DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851BE1DE2094D22D00DF3684 /* Pods_DLParser.framework */; };
+		854AAD442094CCA500DBDEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AAD432094CCA500DBDEF4 /* AppDelegate.swift */; };
+		854AAD462094CCA500DBDEF4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AAD452094CCA500DBDEF4 /* ScannerViewController.swift */; };
+		854AAD4B2094CCA500DBDEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854AAD4A2094CCA500DBDEF4 /* Assets.xcassets */; };
+		854AAD4E2094CCA500DBDEF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854AAD4C2094CCA500DBDEF4 /* LaunchScreen.storyboard */; };
+		8594B50D2094DC25001A52A1 /* DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851BE1E22094D51500DF3684 /* DLParser.framework */; };
+		8594B50E2094DC25001A52A1 /* DLParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 851BE1E22094D51500DF3684 /* DLParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8594B50F2094DC25001A52A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8594B50E2094DC25001A52A1 /* DLParser.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07C9A2E4BA93276F5428DC8D /* Pods-DLParser Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DLParser Example/Pods-DLParser Example.debug.xcconfig"; sourceTree = "<group>"; };
+		09690C571FD8FB77FB7474AE /* Pods-DLParser-DLParser Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser-DLParser Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6BFE37C0777E29525C650199 /* Pods_DLParser_DLParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParser_DLParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851BE1DE2094D22D00DF3684 /* Pods_DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851BE1E22094D51500DF3684 /* DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		854AAD402094CCA500DBDEF4 /* DLParser Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DLParser Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854AAD432094CCA500DBDEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		854AAD452094CCA500DBDEF4 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		854AAD4A2094CCA500DBDEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		854AAD4D2094CCA500DBDEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		854AAD4F2094CCA500DBDEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D129503E3318D368CE4265 /* Pods-DLParser-DLParser Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser-DLParser Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example.release.xcconfig"; sourceTree = "<group>"; };
+		D375F730A1D2A1EAE8D4B73F /* Pods-DLParser Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DLParser Example/Pods-DLParser Example.release.xcconfig"; sourceTree = "<group>"; };
+		EE8B7816D745CC52596F191A /* Pods_DLParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		854AAD3D2094CCA500DBDEF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851BE1DF2094D22D00DF3684 /* Pods_DLParser.framework in Frameworks */,
+				5A1300ABC76A49A9065438CA /* Pods_DLParser_DLParser_Example.framework in Frameworks */,
+				8594B50D2094DC25001A52A1 /* DLParser.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3135676B46B30CEBFEB57015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				851BE1DE2094D22D00DF3684 /* Pods_DLParser.framework */,
+				EE8B7816D745CC52596F191A /* Pods_DLParser_Example.framework */,
+				851BE1E22094D51500DF3684 /* DLParser.framework */,
+				6BFE37C0777E29525C650199 /* Pods_DLParser_DLParser_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49F71FC8A1F6E1429C483561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07C9A2E4BA93276F5428DC8D /* Pods-DLParser Example.debug.xcconfig */,
+				D375F730A1D2A1EAE8D4B73F /* Pods-DLParser Example.release.xcconfig */,
+				09690C571FD8FB77FB7474AE /* Pods-DLParser-DLParser Example.debug.xcconfig */,
+				91D129503E3318D368CE4265 /* Pods-DLParser-DLParser Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		854AAD372094CCA400DBDEF4 = {
+			isa = PBXGroup;
+			children = (
+				854AAD422094CCA500DBDEF4 /* DLParser Example */,
+				854AAD412094CCA500DBDEF4 /* Products */,
+				49F71FC8A1F6E1429C483561 /* Pods */,
+				3135676B46B30CEBFEB57015 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		854AAD412094CCA500DBDEF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				854AAD402094CCA500DBDEF4 /* DLParser Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		854AAD422094CCA500DBDEF4 /* DLParser Example */ = {
+			isa = PBXGroup;
+			children = (
+				854AAD432094CCA500DBDEF4 /* AppDelegate.swift */,
+				854AAD452094CCA500DBDEF4 /* ScannerViewController.swift */,
+				854AAD4A2094CCA500DBDEF4 /* Assets.xcassets */,
+				854AAD4C2094CCA500DBDEF4 /* LaunchScreen.storyboard */,
+				854AAD4F2094CCA500DBDEF4 /* Info.plist */,
+			);
+			path = "DLParser Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		854AAD3F2094CCA500DBDEF4 /* DLParser Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854AAD522094CCA500DBDEF4 /* Build configuration list for PBXNativeTarget "DLParser Example" */;
+			buildPhases = (
+				DCD0FEF30538CCE088595AE0 /* [CP] Check Pods Manifest.lock */,
+				854AAD3C2094CCA500DBDEF4 /* Sources */,
+				854AAD3D2094CCA500DBDEF4 /* Frameworks */,
+				854AAD3E2094CCA500DBDEF4 /* Resources */,
+				0859E1FE63873E8535A205FB /* [CP] Embed Pods Frameworks */,
+				F0E026885831CEE55E98E66E /* [CP] Copy Pods Resources */,
+				8594B50F2094DC25001A52A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DLParser Example";
+			productName = "DLParser Example";
+			productReference = 854AAD402094CCA500DBDEF4 /* DLParser Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		854AAD382094CCA400DBDEF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Andrew Johnson";
+				TargetAttributes = {
+					854AAD3F2094CCA500DBDEF4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 854AAD3B2094CCA400DBDEF4 /* Build configuration list for PBXProject "DLParser Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 854AAD372094CCA400DBDEF4;
+			productRefGroup = 854AAD412094CCA500DBDEF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				854AAD3F2094CCA500DBDEF4 /* DLParser Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		854AAD3E2094CCA500DBDEF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854AAD4E2094CCA500DBDEF4 /* LaunchScreen.storyboard in Resources */,
+				854AAD4B2094CCA500DBDEF4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0859E1FE63873E8535A205FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD0FEF30538CCE088595AE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLParser-DLParser Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E026885831CEE55E98E66E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DLParser-DLParser Example/Pods-DLParser-DLParser Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		854AAD3C2094CCA500DBDEF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854AAD462094CCA500DBDEF4 /* ScannerViewController.swift in Sources */,
+				854AAD442094CCA500DBDEF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		854AAD4C2094CCA500DBDEF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				854AAD4D2094CCA500DBDEF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		854AAD502094CCA500DBDEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		854AAD512094CCA500DBDEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		854AAD532094CCA500DBDEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09690C571FD8FB77FB7474AE /* Pods-DLParser-DLParser Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleToolboxForMac\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/BarcodeDetector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/Detector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/FaceDetector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/MVDataOutput/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/TextDetector/Frameworks\"",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = "DLParser Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewjohnson.DLParser-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		854AAD542094CCA500DBDEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91D129503E3318D368CE4265 /* Pods-DLParser-DLParser Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleToolboxForMac\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/BarcodeDetector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/Detector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/FaceDetector/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/MVDataOutput/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMobileVision/TextDetector/Frameworks\"",
+					"$(SRCROOT)",
+				);
+				INFOPLIST_FILE = "DLParser Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewjohnson.DLParser-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		854AAD3B2094CCA400DBDEF4 /* Build configuration list for PBXProject "DLParser Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854AAD502094CCA500DBDEF4 /* Debug */,
+				854AAD512094CCA500DBDEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854AAD522094CCA500DBDEF4 /* Build configuration list for PBXNativeTarget "DLParser Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854AAD532094CCA500DBDEF4 /* Debug */,
+				854AAD542094CCA500DBDEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 854AAD382094CCA400DBDEF4 /* Project object */;
+}

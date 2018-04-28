@@ -73,9 +73,8 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "DLParser", "DLParser/**/*.{h,m,swift}"
-
-
-
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.swift_version = "4.0"
+  s.platform = :ios, "9.0"
 
 end

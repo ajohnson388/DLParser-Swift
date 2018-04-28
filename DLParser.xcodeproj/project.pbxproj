@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7FC53144BA137FB0674E16 /* Pods_DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */; };
 		858EAAB8208D142400713305 /* DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858EAAAE208D142400713305 /* DLParser.framework */; };
 		858EAABD208D142400713305 /* DLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAABC208D142400713305 /* DLParserTests.swift */; };
 		858EAABF208D142400713305 /* DLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 858EAAB1208D142400713305 /* DLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 		858EAB01208D149A00713305 /* VersionSixParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE5208D149A00713305 /* VersionSixParser.swift */; };
 		858EAB02208D149A00713305 /* VersionThreeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE6208D149A00713305 /* VersionThreeParser.swift */; };
 		858EAB03208D149A00713305 /* VersionTwoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE7208D149A00713305 /* VersionTwoParser.swift */; };
+		B119375A80441BE18D86A8D3 /* Pods_DLParserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParser/Pods-DLParser.debug.xcconfig"; sourceTree = "<group>"; };
+		283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.release.xcconfig"; sourceTree = "<group>"; };
+		519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		858EAAAE208D142400713305 /* DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858EAAB1208D142400713305 /* DLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLParser.h; sourceTree = "<group>"; };
 		858EAAB2208D142400713305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 		858EAAE5208D149A00713305 /* VersionSixParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSixParser.swift; sourceTree = "<group>"; };
 		858EAAE6208D149A00713305 /* VersionThreeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionThreeParser.swift; sourceTree = "<group>"; };
 		858EAAE7208D149A00713305 /* VersionTwoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionTwoParser.swift; sourceTree = "<group>"; };
+		85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLParser/Pods-DLParser.release.xcconfig"; sourceTree = "<group>"; };
+		FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7FC53144BA137FB0674E16 /* Pods_DLParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,18 +105,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				858EAAB8208D142400713305 /* DLParser.framework in Frameworks */,
+				B119375A80441BE18D86A8D3 /* Pods_DLParserTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487711F73DD1263A2174DB50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */,
+				85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */,
+				5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */,
+				283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		858EAAA4208D142400713305 = {
 			isa = PBXGroup;
 			children = (
 				858EAAB0208D142400713305 /* DLParser */,
 				858EAABB208D142400713305 /* DLParserTests */,
 				858EAAAF208D142400713305 /* Products */,
+				487711F73DD1263A2174DB50 /* Pods */,
+				A6109A85ABEE9F2D967C69AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +235,15 @@
 			path = "Version Parsers";
 			sourceTree = "<group>";
 		};
+		A6109A85ABEE9F2D967C69AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */,
+				519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -230,10 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858EAAC2208D142400713305 /* Build configuration list for PBXNativeTarget "DLParser" */;
 			buildPhases = (
+				626D710DB8D4D8FDAB6D7AD1 /* [CP] Check Pods Manifest.lock */,
 				858EAAA9208D142400713305 /* Sources */,
 				858EAAAA208D142400713305 /* Frameworks */,
 				858EAAAB208D142400713305 /* Headers */,
 				858EAAAC208D142400713305 /* Resources */,
+				DD706F97D4B8E26D95BC6447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858EAAC5208D142400713305 /* Build configuration list for PBXNativeTarget "DLParserTests" */;
 			buildPhases = (
+				0CD13D956E7468D33D1FD500 /* [CP] Check Pods Manifest.lock */,
 				858EAAB3208D142400713305 /* Sources */,
 				858EAAB4208D142400713305 /* Frameworks */,
 				858EAAB5208D142400713305 /* Resources */,
+				A77C41EA9E76E667AD224DF8 /* [CP] Embed Pods Frameworks */,
+				7B631D8ECD3E5B61159F2710 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +353,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD13D956E7468D33D1FD500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLParserTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626D710DB8D4D8FDAB6D7AD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLParser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B631D8ECD3E5B61159F2710 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A77C41EA9E76E667AD224DF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD706F97D4B8E26D95BC6447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLParser/Pods-DLParser-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParser/Pods-DLParser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		858EAAA9208D142400713305 /* Sources */ = {
@@ -419,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -485,6 +623,7 @@
 		};
 		858EAAC3208D142400713305 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +634,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DLParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -506,6 +646,7 @@
 		};
 		858EAAC4208D142400713305 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +657,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DLParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -527,6 +669,7 @@
 		};
 		858EAAC6208D142400713305 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +685,7 @@
 		};
 		858EAAC7208D142400713305 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
