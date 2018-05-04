@@ -28,7 +28,7 @@ public struct DriverLicense {
     // MARK: - Dates
     
     var expirationDate: Date?
-    var issuedDate: Date?
+    var issueDate: Date?
     var birthdate: Date?
     var hazmatExpirationDate: Date?
     var revisionDate: Date?
@@ -52,7 +52,7 @@ public struct DriverLicense {
     var country: IssuingCountry?
     
     var licenseNumber: String?
-    var doucmentId: String?
+    var documentId: String?
     var auditInformation: String?
     var inventoryControlNumber: String?
     var complianceType: String?
@@ -101,7 +101,7 @@ extension DriverLicense {
         Returns: True when the current date is past the issue date, false otherwise.
      */
     public var isIssued: Bool {
-        guard let issuedDate = issuedDate else {
+        guard let issuedDate = issueDate else {
             return false
         }
         return Date() > issuedDate
