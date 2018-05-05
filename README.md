@@ -15,7 +15,6 @@ supports all AAMVA versions and AAMVA defined fields.
 - [x] Support for all AAMVA fields
 - [x] License model for all AAMVA fields
 - [x] Offline use
-- [] Condensed license model
 
 ## Requirements
 
@@ -24,7 +23,13 @@ supports all AAMVA versions and AAMVA defined fields.
 - Xcode 9.3
 - Cocoapods
 
-## Installation
+## Cocoapod Installation
+
+```ruby
+pod 'DLParser'
+```
+
+## Sample Installation
 
 Clone the repo.
 
@@ -41,6 +46,10 @@ Scan driver license barcodes by using the example app and view output through th
 ## Contribute
 
 Open an issue or make a pull request.
+
+## Note
+
+This library was derived from [https://github.com/ksoftllc/license-parser](https://github.com/ksoftllc/license-parser).
 
 ## Meta
 Andrew Johnson – ajohnson388@gmail.com
