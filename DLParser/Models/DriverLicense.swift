@@ -11,70 +11,70 @@ public struct DriverLicense {
     
     // MARK: - Names
     
-    var firstName: String?
-    var middleNames = [String]()
-    var lastName: String?
+    public var firstName: String?
+    public var middleNames = [String]()
+    public var lastName: String?
     
-    var firstNameAlias: String?
-    var givenNameAlias: String?
-    var lastNameAlias: String?
-    var suffixAlias: String?
-    var suffix: NameSuffix?
-    var firstNameTruncation: Truncation?
-    var middleNameTruncation: Truncation?
-    var lastNameTruncation: Truncation?
+    public var firstNameAlias: String?
+    public var givenNameAlias: String?
+    public var lastNameAlias: String?
+    public var suffixAlias: String?
+    public var suffix: NameSuffix?
+    public var firstNameTruncation: Truncation?
+    public var middleNameTruncation: Truncation?
+    public var lastNameTruncation: Truncation?
     
     
     // MARK: - Dates
     
-    var expirationDate: Date?
-    var issueDate: Date?
-    var birthdate: Date?
-    var hazmatExpirationDate: Date?
-    var revisionDate: Date?
+    public var expirationDate: Date?
+    public var issueDate: Date?
+    public var birthdate: Date?
+    public var hazmatExpirationDate: Date?
+    public var revisionDate: Date?
     
     
     // MARK: - Appearance
     
-    var race: String?
-    var gender: Gender?
-    var eyeColor: EyeColor?
-    var height: Double?
-    var weight = Weight()
-    var hairColor: HairColor?
+    public var race: String?
+    public var gender: Gender?
+    public var eyeColor: EyeColor?
+    public var height: Double?
+    public var weight = Weight()
+    public var hairColor: HairColor?
     
-    var placeOfBirth: String?
-    var streetAddress: String?
-    var streetAddressTwo: String?
-    var city: String?
-    var state: String?
-    var postalCode: String?
-    var country: IssuingCountry?
+    public var placeOfBirth: String?
+    public var streetAddress: String?
+    public var streetAddressTwo: String?
+    public var city: String?
+    public var state: String?
+    public var postalCode: String?
+    public var country: IssuingCountry?
     
-    var licenseNumber: String?
-    var documentId: String?
-    var auditInformation: String?
-    var inventoryControlNumber: String?
-    var complianceType: String?
-    var isOrganDonor: Bool?
-    var isVeteran: Bool?
-    var isTemporaryDocument: Bool?
+    public var licenseNumber: String?
+    public var documentId: String?
+    public var auditInformation: String?
+    public var inventoryControlNumber: String?
+    public var complianceType: String?
+    public var isOrganDonor: Bool?
+    public var isVeteran: Bool?
+    public var isTemporaryDocument: Bool?
     
-    var federalVehicleCode: String?
-    var standardVehicleCode: String?
-    var standardRestrictionCode: String?
-    var standardEndorsementCode: String?
+    public var federalVehicleCode: String?
+    public var standardVehicleCode: String?
+    public var standardRestrictionCode: String?
+    public var standardEndorsementCode: String?
     
-    var jurisdictionVehicleCode: String?
-    var jurisdictionRestrictionCode: String?
-    var jurisdictionEndorsementCode: String?
+    public var jurisdictionVehicleCode: String?
+    public var jurisdictionRestrictionCode: String?
+    public var jurisdictionEndorsementCode: String?
     
-    var jurisdictionVehicleDescription: String?
-    var jurisdictionRestrictionDescription: String?
-    var jurisdictionEndorsementDescription: String?
+    public var jurisdictionVehicleDescription: String?
+    public var jurisdictionRestrictionDescription: String?
+    public var jurisdictionEndorsementDescription: String?
     
-    var version: Int?
-    var pdf417Data: String?
+    public var version: Int?
+    public var pdf417Data: String?
     
 }
 
