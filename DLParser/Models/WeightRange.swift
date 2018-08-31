@@ -10,11 +10,11 @@ import Foundation
 /**
     Parses weight range for v1-9 (All current versions).
  */
-struct WeightRange {
+public struct WeightRange {
     
-    var rank: Int
+    public var rank: Int
     
-    var kilograms: CountableClosedRange<Int> {
+    public var kilograms: CountableClosedRange<Int> {
         switch rank {
         case 1: return 32...45
         case 2: return 46...59
@@ -29,7 +29,7 @@ struct WeightRange {
         }
     }
     
-    var pounds: CountableClosedRange<Int> {
+    public var pounds: CountableClosedRange<Int> {
         switch rank {
         case 1: return 71...100
         case 2: return 101...130

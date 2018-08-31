@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Weight {
-    var range: WeightRange?
-    var pounds: Double?
+public struct Weight {
+    public var range: WeightRange?
+    public var pounds: Double?
 }
