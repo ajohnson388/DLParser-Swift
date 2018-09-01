@@ -12,7 +12,7 @@ import Foundation
     Published 03-2005.
  */
 class VersionThreeFieldParser: AAMVAParser {
-    
+
     override init(data: String) {
         super.init(data: data)
         fields[FieldKey.firstName] = nil

@@ -11,7 +11,7 @@ import Foundation
     Published 07-2011.
  */
 class VersionSixParser: AAMVAParser {
-    
+
     override init(data: String) {
         super.init(data: data)
         fields[FieldKey.isVeteran] = nil

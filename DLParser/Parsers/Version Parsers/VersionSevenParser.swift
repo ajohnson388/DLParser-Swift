@@ -11,7 +11,7 @@ import Foundation
     Published 06-2012.
  */
 class VersionSevenParser: AAMVAParser {
-    
+
     override init(data: String) {
         super.init(data: data)
         fields[FieldKey.fVehicleCode] = nil

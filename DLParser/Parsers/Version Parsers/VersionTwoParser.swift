@@ -33,7 +33,7 @@ class VersionTwoFieldParser: AAMVAParser {
         fields[FieldKey.isVeteran] = nil
         fields[FieldKey.driverLicenseName] = nil
     }
-    
+
     override var canadaDateFormat: String {
         return "MMddyyyy"
     }

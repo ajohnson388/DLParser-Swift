@@ -12,7 +12,7 @@ import Foundation
     Published 07-2010.
  */
 class VersionFiveFieldParser: AAMVAParser {
-    
+
     override init(data: String) {
         super.init(data: data)
         fields[FieldKey.isOrganDonor] = nil

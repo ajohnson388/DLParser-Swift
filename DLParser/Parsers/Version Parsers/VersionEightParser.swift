@@ -12,7 +12,7 @@ import Foundation
     Published 08-2013.
  */
 class VersionEightFieldParser: AAMVAParser {
-    
+
     override init(data: String) {
         super.init(data: data)
         fields[FieldKey.fVehicleCode] = nil

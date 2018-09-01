@@ -46,7 +46,7 @@ class VersionOneParser: AAMVAParser {
         fields[FieldKey.isOrganDonor] = "DBH"
         fields[FieldKey.isVeteran] = nil
     }
-    
+
     override var unitedStatesDateFormat: String {
         return "yyyyMMdd"
     }
@@ -57,15 +57,15 @@ class VersionOneParser: AAMVAParser {
         return parseString(key: FieldKey.heightCentimeters)?.double
             ?? parsedInches
     }
-    
+
     private var parsedInches: Double? {
         guard let feetInches = parseString(key: FieldKey.heightInches),
             feetInches.count == 3 else {
             return nil
         }
-        
+
         let inchesStartIndex = feetInches.index(feetInches.startIndex, offsetBy: 1)
-        
+
         guard
         let feet = feetInches[feetInches.startIndex].string.double,
         let inches = feetInches[inchesStartIndex...feetInches.endIndex].string.double else {
@@ -88,7 +88,7 @@ class VersionOneParser: AAMVAParser {
         guard let driverLicenseName = parseString(key: FieldKey.driverLicenseName) else {
             return nil
         }
-        let nameComponents = driverLicenseName.split{ $0 == "," }.map(String.init)
+        let nameComponents = driverLicenseName.split { $0 == "," }.map(String.init)
 
         // Return the name component associated with the key
         switch key {
