@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                 = "DLParser"
-    s.version              = "0.0.1"
+    s.version              = "1.0.0"
     s.license              = { :type => "MIT", :file => "LICENSE" }
     s.author               = { "ajohnson" => "ajohnson388@gmail.com" }
     s.homepage             = "https://github.com/ajohnson388/DLParser-Swift"
