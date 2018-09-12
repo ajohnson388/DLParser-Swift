@@ -114,7 +114,7 @@ class ScannerViewController: UIViewController {
             return
         }
         
-        let barcodes = features.flatMap { $0 as? GMVBarcodeFeature }
+        let barcodes = features.compactMap { $0 as? GMVBarcodeFeature }
         let licenses = barcodes.map { AAMVAParser(data: $0.rawValue).parse() }
         guard let license = licenses.first(where: { $0.isAcceptable }) else {
             return
