@@ -22,7 +22,7 @@ public class AAMVAParser {
         field should be modified in subclasses for version-specific
         field changes.
      */
-    public final var fields: [FieldKey: String] = [
+    final var fields: [FieldKey: String] = [
         FieldKey.jurisdictionVehicleClass: "DCA",
         FieldKey.jurisdictionRestrictionCode: "DCB",
         FieldKey.jurisdictionEndorsementCode: "DCD",
@@ -78,13 +78,13 @@ public class AAMVAParser {
 
 
     /// The raw data from an AAMVA specification adhering to the PDF-417 barcode standard.
-    public final let data: String
+    final let data: String
     
     /**
         The version number detected in the driver license data or nil
         if the data is not AAMVA compliant.
      */
-    public var versionNumber: Int? {
+    final var versionNumber: Int? {
         let pattern = "\\d{6}(\\d{2})\\w+"
         guard let match = NSRegularExpression.firstMatch(pattern: pattern,
                                                          data: data) as NSString? else {
@@ -94,7 +94,7 @@ public class AAMVAParser {
     }
     
     /// The number of subfiles found in the driver license data.
-    public var subfileCount: Int? {
+    final var subfileCount: Int? {
         let match = NSRegularExpression.firstMatch(pattern: "\\d{8}(\\d{2})\\w+",
                                                    data: data) as NSString?
         return match?.integerValue
@@ -105,7 +105,7 @@ public class AAMVAParser {
         This field should be modified in subclasses for version-specific
         date format changes.
     */
-    public var unitedStatesDateFormat: String {
+    var unitedStatesDateFormat: String {
         return "MMddyyyy"
     }
     
@@ -114,12 +114,12 @@ public class AAMVAParser {
         should be modified in subclasses for version-specific date
         format changes.
     */
-    public var canadaDateFormat: String {
+    var canadaDateFormat: String {
         return "yyyyMMdd"
     }
     
     /// The date format determined by the PDF417 data's country field.
-    public var dateFormat: String {
+    final var dateFormat: String {
         guard let country = parsedCountry else {
             return unitedStatesDateFormat
         }
@@ -167,9 +167,9 @@ public class AAMVAParser {
     // MARK: - Public Methods
     
     /**
-        Parses the AAMVA PDF417 raw barcode data based on the specific AAMVA document version
+        Parses the AAMVA PDF417 raw barcode data based on the specific AAMVA document version.
      
-        - Returns: A ParsedLicense with all available parsed fields
+        - Returns: A ParsedLicense with all available parsed fields.
      */
     public func parse() -> DriverLicense {
         let version = versionNumber
