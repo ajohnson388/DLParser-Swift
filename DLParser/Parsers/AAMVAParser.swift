@@ -207,7 +207,7 @@ public class AAMVAParser {
         license.documentId = parser.parseString(key: FieldKey.uniqueDocumentId)
         license.auditInformation = parser.parseString(key: FieldKey.auditInformation)
         license.inventoryControlNumber = parser.parseString(key: FieldKey.inventoryControlNumber)
-        license.complianceType = parser.parseString(key: FieldKey.complianceType)
+        license.complianceType = parser.parseCategory(key: FieldKey.complianceType)
         license.isOrganDonor = parser.parseBoolean(key: FieldKey.isOrganDonor)
         license.isVeteran = parser.parseBoolean(key: FieldKey.isVeteran)
         license.isTemporaryDocument = parser.parseBoolean(key: FieldKey.isTemporaryDocument)
@@ -301,10 +301,7 @@ public class AAMVAParser {
     }
 
     var parsedNameSuffix: NameSuffix? {
-        guard let suffix = parseString(key: FieldKey.suffix) else {
-            return nil
-        }
-        return NameSuffix.of(suffix)
+        return parseCategory(key: FieldKey.suffix)
     }
     
     /// Returns the height in inches.

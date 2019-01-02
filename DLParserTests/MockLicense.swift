@@ -51,7 +51,7 @@ struct MockLicenseFactory {
         license.documentId = "12345678912345678912"
         license.auditInformation = "auditInformation"
         license.inventoryControlNumber = "123456"
-        license.complianceType = "M"
+        license.complianceType = Compliance.materiallyCompliant
         license.isOrganDonor = true
         license.isVeteran = false
         license.isTemporaryDocument = false

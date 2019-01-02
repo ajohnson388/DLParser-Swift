@@ -130,7 +130,7 @@ public struct DriverLicense: Equatable {
     public var inventoryControlNumber: String?
     
     /// The license holder's compliance type, if any.
-    public var complianceType: String?
+    public var complianceType: Compliance?
     
     /// The license holder's organ donor status, if any.
     public var isOrganDonor: Bool?
