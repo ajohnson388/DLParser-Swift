@@ -23,9 +23,9 @@ Changes are welcomed by everyone. Please review the contributing section in the 
 * Added `Compliance` category for the compliance type field that complies with the ANSI D-20 standard.
 * Extended the `Gender` category to be fully compliant with the ANSI D-20 standard.
 
-## 1.0.0 - January 2, 2019
+## 1.0.0 - September 10, 2018
 * Fixed public fields in the driver license model.
 * Support for Cocoapods.
 
-## 0.1 - January 2, 2019
+## 0.1 - April 22, 2018
 * Initial commit.
