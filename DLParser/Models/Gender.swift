@@ -12,9 +12,15 @@ import Foundation
  */
 public enum Gender: String, StringRepresentable {
     
+    /// Unknown gender
+    case unknown = "0"
+    
     /// Male gender
     case male = "1"
     
     /// Female gender
     case female = "2"
+    
+    /// Gener not specified
+    case notSpecified = "9"
 }
