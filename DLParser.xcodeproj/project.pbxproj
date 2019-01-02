@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2B7FC53144BA137FB0674E16 /* Pods_DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */; };
+		4271947721D98A6D00774CA1 /* CaseIterable+RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271947621D98A6D00774CA1 /* CaseIterable+RawValue.swift */; };
+		4271947921D98C9E00774CA1 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271947821D98C9E00774CA1 /* StringRepresentable.swift */; };
+		42C37F8A21DBD7B500D6FF02 /* MockLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C37F8921DBD7B500D6FF02 /* MockLicense.swift */; };
+		42C37F8C21DBE66A00D6FF02 /* VersionParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C37F8B21DBE66A00D6FF02 /* VersionParserTests.swift */; };
+		42C963B521DBF5C9001FB29F /* BaseParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C963B421DBF5C9001FB29F /* BaseParserTests.swift */; };
 		858EAAB8208D142400713305 /* DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858EAAAE208D142400713305 /* DLParser.framework */; };
-		858EAABD208D142400713305 /* DLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAABC208D142400713305 /* DLParserTests.swift */; };
 		858EAABF208D142400713305 /* DLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 858EAAB1208D142400713305 /* DLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		858EAAEA208D149A00713305 /* DriverLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAC9208D149900713305 /* DriverLicense.swift */; };
 		858EAAEB208D149A00713305 /* FieldKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAACA208D149900713305 /* FieldKeys.swift */; };
@@ -53,13 +57,17 @@
 /* Begin PBXFileReference section */
 		1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParser/Pods-DLParser.debug.xcconfig"; sourceTree = "<group>"; };
 		283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.release.xcconfig"; sourceTree = "<group>"; };
+		4271947621D98A6D00774CA1 /* CaseIterable+RawValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+RawValue.swift"; sourceTree = "<group>"; };
+		4271947821D98C9E00774CA1 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
+		42C37F8921DBD7B500D6FF02 /* MockLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLicense.swift; sourceTree = "<group>"; };
+		42C37F8B21DBE66A00D6FF02 /* VersionParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionParserTests.swift; sourceTree = "<group>"; };
+		42C963B421DBF5C9001FB29F /* BaseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParserTests.swift; sourceTree = "<group>"; };
 		519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		858EAAAE208D142400713305 /* DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858EAAB1208D142400713305 /* DLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLParser.h; sourceTree = "<group>"; };
 		858EAAB2208D142400713305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858EAAB7208D142400713305 /* DLParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		858EAABC208D142400713305 /* DLParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLParserTests.swift; sourceTree = "<group>"; };
 		858EAABE208D142400713305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858EAAC9208D149900713305 /* DriverLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverLicense.swift; sourceTree = "<group>"; };
 		858EAACA208D149900713305 /* FieldKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldKeys.swift; sourceTree = "<group>"; };
@@ -146,7 +154,6 @@
 		858EAAB0208D142400713305 /* DLParser */ = {
 			isa = PBXGroup;
 			children = (
-				858EAAD5208D149A00713305 /* AAMVA Categories */,
 				858EAAD0208D149900713305 /* Extensions */,
 				858EAAC8208D149900713305 /* Models */,
 				858EAADC208D149A00713305 /* Parsers */,
@@ -160,8 +167,10 @@
 		858EAABB208D142400713305 /* DLParserTests */ = {
 			isa = PBXGroup;
 			children = (
-				858EAABC208D142400713305 /* DLParserTests.swift */,
 				858EAABE208D142400713305 /* Info.plist */,
+				42C37F8921DBD7B500D6FF02 /* MockLicense.swift */,
+				42C37F8B21DBE66A00D6FF02 /* VersionParserTests.swift */,
+				42C963B421DBF5C9001FB29F /* BaseParserTests.swift */,
 			);
 			path = DLParserTests;
 			sourceTree = "<group>";
@@ -169,11 +178,18 @@
 		858EAAC8208D149900713305 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				858EAAD6208D149A00713305 /* EyeColor.swift */,
+				858EAAD7208D149A00713305 /* Gender.swift */,
+				858EAAD8208D149A00713305 /* HairColor.swift */,
+				858EAAD9208D149A00713305 /* IssuingCountry.swift */,
+				858EAADA208D149A00713305 /* NameSuffix.swift */,
+				858EAADB208D149A00713305 /* Truncation.swift */,
 				858EAAC9208D149900713305 /* DriverLicense.swift */,
 				858EAACA208D149900713305 /* FieldKeys.swift */,
 				858EAACB208D149900713305 /* ReservedKeywords.swift */,
 				858EAACC208D149900713305 /* Weight.swift */,
 				858EAACD208D149900713305 /* WeightRange.swift */,
+				4271947821D98C9E00774CA1 /* StringRepresentable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,33 +209,21 @@
 				858EAAD2208D149900713305 /* NSRegularExpression+Matching.swift */,
 				858EAAD3208D149900713305 /* String+Convenience.swift */,
 				858EAAD4208D149900713305 /* Substring+Conversion.swift */,
+				4271947621D98A6D00774CA1 /* CaseIterable+RawValue.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		858EAAD5208D149A00713305 /* AAMVA Categories */ = {
-			isa = PBXGroup;
-			children = (
-				858EAAD6208D149A00713305 /* EyeColor.swift */,
-				858EAAD7208D149A00713305 /* Gender.swift */,
-				858EAAD8208D149A00713305 /* HairColor.swift */,
-				858EAAD9208D149A00713305 /* IssuingCountry.swift */,
-				858EAADA208D149A00713305 /* NameSuffix.swift */,
-				858EAADB208D149A00713305 /* Truncation.swift */,
-			);
-			path = "AAMVA Categories";
 			sourceTree = "<group>";
 		};
 		858EAADC208D149A00713305 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
 				858EAADD208D149A00713305 /* AAMVAParser.swift */,
-				858EAADE208D149A00713305 /* Version Parsers */,
+				858EAADE208D149A00713305 /* Versions */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
 		};
-		858EAADE208D149A00713305 /* Version Parsers */ = {
+		858EAADE208D149A00713305 /* Versions */ = {
 			isa = PBXGroup;
 			children = (
 				858EAADF208D149A00713305 /* VersionEightParser.swift */,
@@ -232,7 +236,7 @@
 				858EAAE6208D149A00713305 /* VersionThreeParser.swift */,
 				858EAAE7208D149A00713305 /* VersionTwoParser.swift */,
 			);
-			path = "Version Parsers";
+			path = Versions;
 			sourceTree = "<group>";
 		};
 		A6109A85ABEE9F2D967C69AE /* Frameworks */ = {
@@ -311,11 +315,12 @@
 				TargetAttributes = {
 					858EAAAD208D142400713305 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					858EAAB6208D142400713305 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -461,9 +466,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				858EAB03208D149A00713305 /* VersionTwoParser.swift in Sources */,
+				4271947721D98A6D00774CA1 /* CaseIterable+RawValue.swift in Sources */,
 				858EAAF5208D149A00713305 /* Gender.swift in Sources */,
 				858EAAFD208D149A00713305 /* VersionFourParser.swift in Sources */,
 				858EAAF0208D149A00713305 /* Character+Conversion.swift in Sources */,
+				4271947921D98C9E00774CA1 /* StringRepresentable.swift in Sources */,
 				858EAAF9208D149A00713305 /* Truncation.swift in Sources */,
 				858EAAF3208D149A00713305 /* Substring+Conversion.swift in Sources */,
 				858EAAF7208D149A00713305 /* IssuingCountry.swift in Sources */,
@@ -493,7 +500,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858EAABD208D142400713305 /* DLParserTests.swift in Sources */,
+				42C37F8C21DBE66A00D6FF02 /* VersionParserTests.swift in Sources */,
+				42C963B521DBF5C9001FB29F /* BaseParserTests.swift in Sources */,
+				42C37F8A21DBD7B500D6FF02 /* MockLicense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +648,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -662,7 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -672,13 +681,14 @@
 			baseConfigurationReference = 5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -688,13 +698,14 @@
 			baseConfigurationReference = 283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

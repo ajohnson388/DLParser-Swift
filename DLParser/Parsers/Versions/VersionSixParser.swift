@@ -1,5 +1,5 @@
 //
-//  VersionNineParser.swift
+//  VersionSixParser.swift
 //  DLParserTests
 //
 //  Created by Andrew Johnson on 3/19/18.
@@ -8,13 +8,14 @@
 import Foundation
 
 /**
-    Published 2016.
+    Published 07-2011.
  */
-class VersionNineParser: AAMVAParser {
+class VersionSixParser: AAMVAParser {
 
     override init(data: String) {
         super.init(data: data)
-        fields[FieldKey.fVehicleCode] = nil
+        fields[FieldKey.isVeteran] = nil
+        fields[FieldKey.federalVehicleCode] = nil
         fields[FieldKey.driverLicenseName] = nil
         fields[FieldKey.givenName] = nil
     }

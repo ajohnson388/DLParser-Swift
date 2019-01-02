@@ -17,7 +17,7 @@ class VersionFiveFieldParser: AAMVAParser {
         super.init(data: data)
         fields[FieldKey.isOrganDonor] = nil
         fields[FieldKey.isVeteran] = nil
-        fields[FieldKey.fVehicleCode] = nil
+        fields[FieldKey.federalVehicleCode] = nil
         fields[FieldKey.driverLicenseName] = nil
         fields[FieldKey.givenName] = nil
     }

@@ -15,9 +15,9 @@ class VersionOneParser: AAMVAParser {
     
     override init(data: String) {
         super.init(data: data)
-        fields[FieldKey.jVehicleClass] = nil
-        fields[FieldKey.jRestrictionCode] = nil
-        fields[FieldKey.jEndorsementCode] = nil
+        fields[FieldKey.jurisdictionVehicleClass] = nil
+        fields[FieldKey.jurisdictionRestrictionCode] = nil
+        fields[FieldKey.jurisdictionEndorsementCode] = nil
         fields[FieldKey.lastName] = "DAB"
         fields[FieldKey.uniqueDocumentId] = "DBJ"
         fields[FieldKey.country] = nil  // TODO: No documentation?
@@ -33,12 +33,12 @@ class VersionOneParser: AAMVAParser {
         fields[FieldKey.suffix] = "DAE"
         fields[FieldKey.weightRange] = nil
         fields[FieldKey.race] = nil
-        fields[FieldKey.sVehicleCode] = "PAA"
-        fields[FieldKey.sEndorsementCode] = "PAF"
-        fields[FieldKey.sRestrictionCode] = "PAE"
-        fields[FieldKey.jVehicleClassDescription] = nil
-        fields[FieldKey.jEndorsementCodeDescription] = nil
-        fields[FieldKey.jRestrictionCodeDescription] = nil
+        fields[FieldKey.standardVehicleCode] = "PAA"
+        fields[FieldKey.standardEndorsementCode] = "PAF"
+        fields[FieldKey.standardRestrictionCode] = "PAE"
+        fields[FieldKey.jurisdictionVehicleClassDescription] = nil
+        fields[FieldKey.jurisdictionEndorsementCodeDescription] = nil
+        fields[FieldKey.jurisdictionRestrictionCodeDescription] = nil
         fields[FieldKey.complianceType] = nil
         fields[FieldKey.revisionDate] = nil
         fields[FieldKey.hazmatExpirationDate] = nil

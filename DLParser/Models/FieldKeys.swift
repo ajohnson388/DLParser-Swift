@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum FieldKey: String {
+public enum FieldKey: String, Equatable {
     
     // MARK: - Names
     
@@ -74,19 +74,18 @@ public enum FieldKey: String {
     case isVeteran
     case isTemporaryDocument
     
-    case fVehicleCode  // f ==> Federal
-    
-    case sVehicleCode  // s ==> Standard
-    case sRestrictionCode
-    case sEndorsementCode
-    
-    case jVehicleClass  // j ==> Jurisdiction
-    case jRestrictionCode
-    case jEndorsementCode
-    
-    case jVehicleClassDescription
-    case jRestrictionCodeDescription
-    case jEndorsementCodeDescription
-    
+    case federalVehicleCode
     case federalCommercialVehicleCode
+    
+    case standardVehicleCode
+    case standardRestrictionCode
+    case standardEndorsementCode
+    
+    case jurisdictionVehicleClass
+    case jurisdictionRestrictionCode
+    case jurisdictionEndorsementCode
+    
+    case jurisdictionVehicleClassDescription
+    case jurisdictionRestrictionCodeDescription
+    case jurisdictionEndorsementCodeDescription
 }

@@ -22,7 +22,7 @@ import Foundation
      - Eighth: Eighth, VIII, 8th
      - Ninth: Ninth, IX, 9th
  */
-public enum NameSuffix: String {
+public enum NameSuffix {
     case junior
     case senior
     case first
@@ -39,7 +39,7 @@ public enum NameSuffix: String {
 
 // MARK: - Parsing
 
-extension NameSuffix {
+extension NameSuffix: StringRepresntable {
     
     static func of(_ rawValue: String) -> NameSuffix? {
         switch rawValue {

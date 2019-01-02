@@ -15,7 +15,7 @@ class VersionEightFieldParser: AAMVAParser {
 
     override init(data: String) {
         super.init(data: data)
-        fields[FieldKey.fVehicleCode] = nil
+        fields[FieldKey.federalVehicleCode] = nil
         fields[FieldKey.driverLicenseName] = nil
         fields[FieldKey.givenName] = nil
     }

@@ -11,7 +11,7 @@ import GoogleMobileVision
 import AVFoundation
 import DLParser
 
-class ScannerViewController: UIViewController {
+final class ScannerViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -55,12 +55,14 @@ class ScannerViewController: UIViewController {
     
     
     func configureVideoSession() {
+        // Start the configuration
         defer { videoSession.commitConfiguration() }
         videoSession.beginConfiguration()
         
         // Set the camera quality
         videoSession.sessionPreset = .high
         
+        // Set the rear camera as the input
         let position = AVCaptureDevice.Position.back
         guard let deviceInput = getDeviceInput(forPosition: position) else {
             return
@@ -114,7 +116,7 @@ class ScannerViewController: UIViewController {
             return
         }
         
-        let barcodes = features.flatMap { $0 as? GMVBarcodeFeature }
+        let barcodes = features.compactMap { $0 as? GMVBarcodeFeature }
         let licenses = barcodes.map { AAMVAParser(data: $0.rawValue).parse() }
         guard let license = licenses.first(where: { $0.isAcceptable }) else {
             return

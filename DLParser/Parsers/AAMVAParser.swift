@@ -16,55 +16,55 @@ public class AAMVAParser {
         field changes.
      */
     public final var fields: [FieldKey: String] = [
-        FieldKey.jVehicleClass:                 "DCA",
-        FieldKey.jRestrictionCode:              "DCB",
-        FieldKey.jEndorsementCode:              "DCD",
-        FieldKey.expirationDate:                "DBA",
-        FieldKey.issueDate:                     "DBD",
-        FieldKey.firstName:                     "DAC",
-        FieldKey.middleName:                    "DAD",
-        FieldKey.lastName:                      "DCS",
-        FieldKey.birthDate:                     "DBB",
-        FieldKey.gender:                        "DBC",
-        FieldKey.eyeColor:                      "DAY",
-        FieldKey.heightInches:                  "DAU",
-        FieldKey.streetAddress:                 "DAG",
-        FieldKey.city:                          "DAI",
-        FieldKey.state:                         "DAJ",
-        FieldKey.postalCode:                    "DAK",
-        FieldKey.driverLicenseNumber:           "DAQ",
-        FieldKey.uniqueDocumentId:              "DCF",
-        FieldKey.country:                       "DCG",
-        FieldKey.lastNameTruncation:            "DDE",
-        FieldKey.firstNameTruncation:           "DDF",
-        FieldKey.middleNameTruncation:          "DDG",
-        FieldKey.streetAddressTwo:              "DAH",
-        FieldKey.hairColor:                     "DAZ",
-        FieldKey.placeOfBirth:                  "DCI",
-        FieldKey.auditInformation:              "DCJ",
-        FieldKey.inventoryControlNumber:        "DCK",
-        FieldKey.lastNameAlias:                 "DBN",
-        FieldKey.givenNameAlias:                "DBG",
-        FieldKey.suffix:                        "DBS", // TODO: Or DCU
-        FieldKey.weightRange:                   "DCE",
-        FieldKey.race:                          "DCL",
-        FieldKey.sVehicleCode:                  "DCM",
-        FieldKey.sEndorsementCode:              "DCN",
-        FieldKey.sRestrictionCode:              "DCO",
-        FieldKey.jVehicleClassDescription:      "DCP",
-        FieldKey.jEndorsementCodeDescription:   "DCQ",
-        FieldKey.jRestrictionCodeDescription:   "DCR",
-        FieldKey.complianceType:                "DDA",
-        FieldKey.revisionDate:                  "DDB",
-        FieldKey.hazmatExpirationDate:          "DDC",
-        FieldKey.weightPounds:                  "DAW",
-        FieldKey.weightKilograms:               "DAX",
-        FieldKey.isTemporaryDocument:           "DDD",
-        FieldKey.isOrganDonor:                  "DDK",
-        FieldKey.isVeteran:                     "DDL",
-        FieldKey.fVehicleCode:                  "DCH",
-        FieldKey.driverLicenseName:             "DAA",
-        FieldKey.givenName:                     "DCT",
+        FieldKey.jurisdictionVehicleClass: "DCA",
+        FieldKey.jurisdictionRestrictionCode: "DCB",
+        FieldKey.jurisdictionEndorsementCode: "DCD",
+        FieldKey.expirationDate: "DBA",
+        FieldKey.issueDate: "DBD",
+        FieldKey.firstName: "DAC",
+        FieldKey.middleName: "DAD",
+        FieldKey.lastName: "DCS",
+        FieldKey.birthDate: "DBB",
+        FieldKey.gender: "DBC",
+        FieldKey.eyeColor: "DAY",
+        FieldKey.heightInches: "DAU",
+        FieldKey.streetAddress: "DAG",
+        FieldKey.city: "DAI",
+        FieldKey.state: "DAJ",
+        FieldKey.postalCode: "DAK",
+        FieldKey.driverLicenseNumber: "DAQ",
+        FieldKey.uniqueDocumentId: "DCF",
+        FieldKey.country: "DCG",
+        FieldKey.lastNameTruncation: "DDE",
+        FieldKey.firstNameTruncation: "DDF",
+        FieldKey.middleNameTruncation: "DDG",
+        FieldKey.streetAddressTwo: "DAH",
+        FieldKey.hairColor: "DAZ",
+        FieldKey.placeOfBirth: "DCI",
+        FieldKey.auditInformation: "DCJ",
+        FieldKey.inventoryControlNumber: "DCK",
+        FieldKey.lastNameAlias: "DBN",
+        FieldKey.givenNameAlias: "DBG",
+        FieldKey.suffix: "DBS", // TODO: Or DCU
+        FieldKey.weightRange: "DCE",
+        FieldKey.race: "DCL",
+        FieldKey.standardVehicleCode: "DCM",
+        FieldKey.standardEndorsementCode: "DCN",
+        FieldKey.standardRestrictionCode: "DCO",
+        FieldKey.jurisdictionVehicleClassDescription: "DCP",
+        FieldKey.jurisdictionEndorsementCodeDescription: "DCQ",
+        FieldKey.jurisdictionRestrictionCodeDescription: "DCR",
+        FieldKey.complianceType: "DDA",
+        FieldKey.revisionDate: "DDB",
+        FieldKey.hazmatExpirationDate: "DDC",
+        FieldKey.weightPounds: "DAW",
+        FieldKey.weightKilograms: "DAX",
+        FieldKey.isTemporaryDocument: "DDD",
+        FieldKey.isOrganDonor: "DDK",
+        FieldKey.isVeteran: "DDL",
+        FieldKey.federalVehicleCode: "DCH",
+        FieldKey.driverLicenseName: "DAA",
+        FieldKey.givenName: "DCT",
     ]
 
     /**
@@ -168,57 +168,57 @@ public class AAMVAParser {
     public func parse() -> DriverLicense {
         let version = versionNumber
         let parser = self.versionParser
-        return DriverLicense(
-            firstName:                              parser.parsedFirstName,
-            middleNames:                            parser.parsedMiddleNames,
-            lastName:                               parser.parsedLastName,
-            firstNameAlias:                         parser.parseString(key: FieldKey.firstNameAlias),
-            givenNameAlias:                         parser.parseString(key: FieldKey.givenNameAlias),
-            lastNameAlias:                          parser.parseString(key: FieldKey.lastNameAlias),
-            suffixAlias:                            parser.parseString(key: FieldKey.suffixAlias),
-            suffix:                                 parser.parsedNameSuffix,
-            firstNameTruncation:                    parser.parseTruncation(key: FieldKey.firstNameTruncation),
-            middleNameTruncation:                   parser.parseTruncation(key: FieldKey.middleNameTruncation),
-            lastNameTruncation:                     parser.parseTruncation(key: FieldKey.lastNameTruncation),
-            expirationDate:                         parser.parseDate(key: FieldKey.expirationDate),
-            issueDate:                             parser.parseDate(key: FieldKey.issueDate),
-            birthdate:                              parser.parseDate(key: FieldKey.birthDate),
-            hazmatExpirationDate:                   parser.parseDate(key: FieldKey.hazmatExpirationDate),
-            revisionDate:                           parser.parseDate(key: FieldKey.revisionDate),
-            race:                                   parser.parseString(key: FieldKey.race),
-            gender:                                 parser.parsedGender,
-            eyeColor:                               parser.parsedEyeColor,
-            height:                                 parser.parsedHeight,
-            weight:                                 parser.parsedWeight,
-            hairColor:                              parser.parsedHairColor,
-            placeOfBirth:                           parser.parseString(key: FieldKey.placeOfBirth),
-            streetAddress:                          parser.parseString(key: FieldKey.streetAddress),
-            streetAddressTwo:                       parser.parseString(key: FieldKey.streetAddressTwo),
-            city:                                   parser.parseString(key: FieldKey.city),
-            state:                                  parser.parseString(key: FieldKey.state),
-            postalCode:                             parser.parseString(key: FieldKey.postalCode),
-            country:                                parser.parsedCountry,
-            licenseNumber:                          parser.parseString(key: FieldKey.driverLicenseNumber),
-            documentId:                             parser.parseString(key: FieldKey.uniqueDocumentId),
-            auditInformation:                       parser.parseString(key: FieldKey.auditInformation),
-            inventoryControlNumber:                 parser.parseString(key: FieldKey.inventoryControlNumber),
-            complianceType:                         parser.parseString(key: FieldKey.complianceType),
-            isOrganDonor:                           parser.parseBoolean(key: FieldKey.isOrganDonor),
-            isVeteran:                              parser.parseBoolean(key: FieldKey.isVeteran),
-            isTemporaryDocument:                    parser.parseBoolean(key: FieldKey.isTemporaryDocument),
-            federalVehicleCode:                     parser.parseString(key: FieldKey.fVehicleCode),
-            standardVehicleCode:                    parser.parseString(key: FieldKey.sVehicleCode),
-            standardRestrictionCode:                parser.parseString(key: FieldKey.sRestrictionCode),
-            standardEndorsementCode:                parser.parseString(key: FieldKey.sEndorsementCode),
-            jurisdictionVehicleCode:                parser.parseString(key: FieldKey.jVehicleClass),
-            jurisdictionRestrictionCode:            parser.parseString(key: FieldKey.jRestrictionCode),
-            jurisdictionEndorsementCode:            parser.parseString(key: FieldKey.jEndorsementCode),
-            jurisdictionVehicleDescription:         parser.parseString(key: FieldKey.jVehicleClassDescription),
-            jurisdictionRestrictionDescription:     parser.parseString(key: FieldKey.jRestrictionCodeDescription),
-            jurisdictionEndorsementDescription:     parser.parseString(key: FieldKey.jEndorsementCodeDescription),
-            version:                                version,
-            pdf417Data:                             data
-        )
+        var license = DriverLicense()
+        license.firstName = parser.parsedFirstName
+        license.middleNames = parser.parsedMiddleNames
+        license.lastName = parser.parsedLastName
+        license.firstNameAlias = parser.parseString(key: FieldKey.firstNameAlias)
+        license.givenNameAlias = parser.parseString(key: FieldKey.givenNameAlias)
+        license.lastNameAlias = parser.parseString(key: FieldKey.lastNameAlias)
+        license.suffixAlias = parser.parseString(key: FieldKey.suffixAlias)
+        license.suffix = parser.parsedNameSuffix
+        license.firstNameTruncation = parser.parseTruncation(key: FieldKey.firstNameTruncation)
+        license.middleNameTruncation = parser.parseTruncation(key: FieldKey.middleNameTruncation)
+        license.lastNameTruncation = parser.parseTruncation(key: FieldKey.lastNameTruncation)
+        license.expirationDate = parser.parseDate(key: FieldKey.expirationDate)
+        license.issueDate = parser.parseDate(key: FieldKey.issueDate)
+        license.birthdate = parser.parseDate(key: FieldKey.birthDate)
+        license.hazmatExpirationDate = parser.parseDate(key: FieldKey.hazmatExpirationDate)
+        license.revisionDate = parser.parseDate(key: FieldKey.revisionDate)
+        license.race = parser.parseString(key: FieldKey.race)
+        license.gender = parser.parsedGender
+        license.eyeColor = parser.parsedEyeColor
+        license.height = parser.parsedHeight
+        license.weight = parser.parsedWeight
+        license.hairColor = parser.parsedHairColor
+        license.placeOfBirth = parser.parseString(key: FieldKey.placeOfBirth)
+        license.streetAddress = parser.parseString(key: FieldKey.streetAddress)
+        license.streetAddressTwo = parser.parseString(key: FieldKey.streetAddressTwo)
+        license.city = parser.parseString(key: FieldKey.city)
+        license.state = parser.parseString(key: FieldKey.state)
+        license.postalCode = parser.parseString(key: FieldKey.postalCode)
+        license.country = parser.parsedCountry
+        license.licenseNumber = parser.parseString(key: FieldKey.driverLicenseNumber)
+        license.documentId = parser.parseString(key: FieldKey.uniqueDocumentId)
+        license.auditInformation = parser.parseString(key: FieldKey.auditInformation)
+        license.inventoryControlNumber = parser.parseString(key: FieldKey.inventoryControlNumber)
+        license.complianceType = parser.parseString(key: FieldKey.complianceType)
+        license.isOrganDonor = parser.parseBoolean(key: FieldKey.isOrganDonor)
+        license.isVeteran = parser.parseBoolean(key: FieldKey.isVeteran)
+        license.isTemporaryDocument = parser.parseBoolean(key: FieldKey.isTemporaryDocument)
+        license.federalVehicleCode = parser.parseString(key: FieldKey.federalVehicleCode)
+        license.standardVehicleClass = parser.parseString(key: FieldKey.standardVehicleCode)
+        license.standardRestrictionCode = parser.parseString(key: FieldKey.standardRestrictionCode)
+        license.standardEndorsementCode = parser.parseString(key: FieldKey.standardEndorsementCode)
+        license.jurisdictionVehicleClass = parser.parseString(key: FieldKey.jurisdictionVehicleClass)
+        license.jurisdictionRestrictionCode = parser.parseString(key: FieldKey.jurisdictionRestrictionCode)
+        license.jurisdictionEndorsementCode = parser.parseString(key: FieldKey.jurisdictionEndorsementCode)
+        license.jurisdictionVehicleDescription = parser.parseString(key: FieldKey.jurisdictionVehicleClassDescription)
+        license.jurisdictionRestrictionDescription = parser.parseString(key: FieldKey.jurisdictionRestrictionCodeDescription)
+        license.jurisdictionEndorsementDescription = parser.parseString(key: FieldKey.jurisdictionEndorsementCodeDescription)
+        license.version = version
+        license.pdf417Data = data
+        return license
     }
 
     

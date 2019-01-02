@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DriverLicense {
+public struct DriverLicense: Equatable {
     
     // MARK: - Names
     
@@ -61,11 +61,11 @@ public struct DriverLicense {
     public var isTemporaryDocument: Bool?
     
     public var federalVehicleCode: String?
-    public var standardVehicleCode: String?
+    public var standardVehicleClass: String?
     public var standardRestrictionCode: String?
     public var standardEndorsementCode: String?
     
-    public var jurisdictionVehicleCode: String?
+    public var jurisdictionVehicleClass: String?
     public var jurisdictionRestrictionCode: String?
     public var jurisdictionEndorsementCode: String?
     
@@ -76,6 +76,7 @@ public struct DriverLicense {
     public var version: Int?
     public var pdf417Data: String?
     
+    public init() {}
 }
 
 
@@ -116,14 +117,18 @@ extension DriverLicense {
         return licenseNumber != nil
     }
     
+    /**
+        Determines if the license holder is 18 or older.
+     
+        Returns: True if the license holder is 18 or older.
+     */
     public var isJuvenile: Bool {
         var component = DateComponents()
         component.year = -18
         
         guard
         let birthDate = birthdate,
-        let calculatedDate = Calendar.current
-            .date(byAdding: component, to: Date()) else {
+        let calculatedDate = Calendar.current.date(byAdding: component, to: Date()) else {
             return true
         }
         return calculatedDate >= birthDate

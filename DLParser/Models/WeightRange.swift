@@ -10,7 +10,7 @@ import Foundation
 /**
     Parses weight range for v1-9 (All current versions).
  */
-public struct WeightRange {
+public struct WeightRange: Equatable {
     
     public var rank: Int
     
@@ -42,5 +42,9 @@ public struct WeightRange {
         case 9: return 321...Int.max
         default: return 0...70
         }
+    }
+    
+    public init(rank: Int) {
+        self.rank = rank
     }
 }
