@@ -34,7 +34,7 @@ struct MockLicenseFactory {
         license.birthdate = makeDate("11111114", dateFormat)
         license.hazmatExpirationDate = makeDate("11111115", dateFormat)
         license.revisionDate = makeDate("11111116", dateFormat)
-        license.race = "race"
+        license.race = Race.white
         license.gender = Gender.male
         license.eyeColor = EyeColor.brown
         license.height = 52
