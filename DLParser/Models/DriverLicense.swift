@@ -15,170 +15,170 @@ public struct DriverLicense: Equatable {
     
     // MARK: - Names
     
-    // The license holder's first name, if any.
+    /// The license holder's first name, if any.
     public var firstName: String?
     
-    // The license holder's middle names.
+    /// The license holder's middle names.
     public var middleNames = [String]()
     
-    // The license holder's last name, if any.
+    /// The license holder's last name, if any.
     public var lastName: String?
     
-    // The license holder's alias of the first name, if any.
+    /// The license holder's alias of the first name, if any.
     public var firstNameAlias: String?
     
-    // The license holder's alias of the given name, if any.
+    /// The license holder's alias of the given name, if any.
     public var givenNameAlias: String?
     
-    // The license holder's alias of the last name, if any.
+    /// The license holder's alias of the last name, if any.
     public var lastNameAlias: String?
     
-    // The license holder's alias of the suffix, if any.
+    /// The license holder's alias of the suffix, if any.
     public var suffixAlias: String?
     
-    // The license holder's suffix, if any.
+    /// The license holder's suffix, if any.
     public var suffix: NameSuffix?
     
-    // An indication that the first name was truncated, if any.
+    /// An indication that the first name was truncated, if any.
     public var firstNameTruncation: Truncation?
     
-    // An indication that the middle name was truncated, if any.
+    /// An indication that the middle name was truncated, if any.
     public var middleNameTruncation: Truncation?
     
-    // An indication that the last name was truncated, if any.
+    /// An indication that the last name was truncated, if any.
     public var lastNameTruncation: Truncation?
     
     
     // MARK: - Dates
     
-    // The expiration date of the license, if any.
+    /// The expiration date of the license, if any.
     public var expirationDate: Date?
     
-    // The issue date of the license, if any.
+    /// The issue date of the license, if any.
     public var issueDate: Date?
     
-    // The license holder's birth date, if any.
+    /// The license holder's birth date, if any.
     public var birthdate: Date?
     
-    // The hazmat expiration date of the license, if any.
+    /// The hazmat expiration date of the license, if any.
     public var hazmatExpirationDate: Date?
     
-    // The revision date of the license, if any.
+    /// The revision date of the license, if any.
     public var revisionDate: Date?
     
     
     // MARK: - Appearance
     
-    // The license holder's race, if any.
+    /// The license holder's race, if any.
     public var race: String?
     
-    // The license holder's gender, if any.
+    /// The license holder's gender, if any.
     public var gender: Gender?
     
-    // The license holder's eye color, if any.
+    /// The license holder's eye color, if any.
     public var eyeColor: EyeColor?
     
-    // The license holder's height in centimeters, if any.
+    /// The license holder's height in centimeters, if any.
     public var height: Double?
     
-    // The license holder's exact weight or weight range, if any.
+    /// The license holder's exact weight or weight range, if any.
     public var weight = Weight()
     
-    // The license holder's hair color, if any.
+    /// The license holder's hair color, if any.
     public var hairColor: HairColor?
     
     
     // MARK: - Location
     
-    // The license holder's place of birth, if any.
+    /// The license holder's place of birth, if any.
     public var placeOfBirth: String?
     
-    // The license holder's street address, if any.
+    /// The license holder's street address, if any.
     public var streetAddress: String?
     
-    // The license holder's street address line two, if any.
+    /// The license holder's street address line two, if any.
     public var streetAddressTwo: String?
     
-    // The license holder's city, if any.
+    /// The license holder's city, if any.
     public var city: String?
     
-    // The license holder's state, if any.
+    /// The license holder's state, if any.
     public var state: String?
     
-    // The license holder's postal code, if any.
+    /// The license holder's postal code, if any.
     public var postalCode: String?
     
-    // The license holder's country, if any.
+    /// The license holder's country, if any.
     public var country: IssuingCountry?
     
     
     // MARK: - Meta Data
     
-    // The AAMVA version used in the driver license PDF417 data.
+    /// The AAMVA version used in the driver license PDF417 data.
     public var version: Int?
     
-    // The UTF-8 data encoded in the PDF417 barcode.
+    /// The UTF-8 data encoded in the PDF417 barcode.
     public var pdf417Data: String?
     
-    // The license holder's driver license number, if any.
+    /// The license holder's driver license number, if any.
     public var licenseNumber: String?
     
-    // The license holder's issued document id, if any.
+    /// The license holder's issued document id, if any.
     public var documentId: String?
     
-    // The license holder's audit information, if any.
+    /// The license holder's audit information, if any.
     public var auditInformation: String?
     
-    // The license holder's inventory control number, if any.
+    /// The license holder's inventory control number, if any.
     public var inventoryControlNumber: String?
     
-    // The license holder's compliance type, if any.
+    /// The license holder's compliance type, if any.
     public var complianceType: String?
     
-    // The license holder's organ donor status, if any.
+    /// The license holder's organ donor status, if any.
     public var isOrganDonor: Bool?
     
-    // The license holder's veteran status, if any.
+    /// The license holder's veteran status, if any.
     public var isVeteran: Bool?
     
-    // The license holder's temporary document status, if any.
+    /// The license holder's temporary document status, if any.
     public var isTemporaryDocument: Bool?
     
     
     // MARK: - Codes
     
-    // The license holder's federal vehicle code, if any.
+    /// The license holder's federal vehicle code, if any.
     public var federalVehicleCode: String?
     
-    // The license holder's standard vehicle class, if any.
+    /// The license holder's standard vehicle class, if any.
     public var standardVehicleClass: String?
     
-    // The license holder's standard restriction code, if any.
+    /// The license holder's standard restriction code, if any.
     public var standardRestrictionCode: String?
     
-    // The license holder's standard endorsement code, if any.
+    /// The license holder's standard endorsement code, if any.
     public var standardEndorsementCode: String?
     
-    // The license holder's jurisdiction vehicle class, if any.
+    /// The license holder's jurisdiction vehicle class, if any.
     public var jurisdictionVehicleClass: String?
     
-    // The license holder's jurisdiction restriction code, if any.
+    /// The license holder's jurisdiction restriction code, if any.
     public var jurisdictionRestrictionCode: String?
     
-    // The license holder's jurisdiction endorsement code, if any.
+    /// The license holder's jurisdiction endorsement code, if any.
     public var jurisdictionEndorsementCode: String?
     
-    // The license holder's jurisdiction vehicle description, if any.
+    /// The license holder's jurisdiction vehicle description, if any.
     public var jurisdictionVehicleDescription: String?
     
-    // The license holder's jurisdiction restriction description, if any.
+    /// The license holder's jurisdiction restriction description, if any.
     public var jurisdictionRestrictionDescription: String?
     
-    // The license holder's jurisdiction endorsement description, if any.
+    /// The license holder's jurisdiction endorsement description, if any.
     public var jurisdictionEndorsementDescription: String?
     
     
-    // Creates an empty driver license.
+    /// Creates an empty driver license.
     public init() {}
 }
 
