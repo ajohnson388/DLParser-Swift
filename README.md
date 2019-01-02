@@ -1,4 +1,4 @@
-[![DLParser][logo-image]][logo-image]
+![DLParser](https://github.com/ajohnson388/DLParser-Swift/blob/master/images/DLParser-Logo.png)
 
 > DLParser is a library for parsing barcode data from AAMVA compliant driver licenses.
 
@@ -61,7 +61,6 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/ajohnson388/](https://github.com/ajohnson388/)
 
-[logo-image]:https://github.com/ajohnson388/DLParser-Swift/tree/master/images/DLParser-Logo.png
 [swift-image]:https://img.shields.io/badge/swift-4.2-orange.svg
 [swift-url]: https://swift.org/
 [test-coverage-image]:https://img.shields.io/badge/Coverage-80%25-orange.svg
