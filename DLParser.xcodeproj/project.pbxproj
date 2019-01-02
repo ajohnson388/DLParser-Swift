@@ -13,6 +13,7 @@
 		42C37F8A21DBD7B500D6FF02 /* MockLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C37F8921DBD7B500D6FF02 /* MockLicense.swift */; };
 		42C37F8C21DBE66A00D6FF02 /* VersionParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C37F8B21DBE66A00D6FF02 /* VersionParserTests.swift */; };
 		42C963B521DBF5C9001FB29F /* BaseParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C963B421DBF5C9001FB29F /* BaseParserTests.swift */; };
+		42CBF06D21DD1C5A005DE54D /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CBF06C21DD1C5A005DE54D /* Race.swift */; };
 		858EAAB8208D142400713305 /* DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858EAAAE208D142400713305 /* DLParser.framework */; };
 		858EAABF208D142400713305 /* DLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 858EAAB1208D142400713305 /* DLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		858EAAEA208D149A00713305 /* DriverLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAC9208D149900713305 /* DriverLicense.swift */; };
@@ -62,6 +63,7 @@
 		42C37F8921DBD7B500D6FF02 /* MockLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLicense.swift; sourceTree = "<group>"; };
 		42C37F8B21DBE66A00D6FF02 /* VersionParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionParserTests.swift; sourceTree = "<group>"; };
 		42C963B421DBF5C9001FB29F /* BaseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParserTests.swift; sourceTree = "<group>"; };
+		42CBF06C21DD1C5A005DE54D /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		858EAAAE208D142400713305 /* DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 		858EAAC8208D149900713305 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42CBF06C21DD1C5A005DE54D /* Race.swift */,
 				858EAAD6208D149A00713305 /* EyeColor.swift */,
 				858EAAD7208D149A00713305 /* Gender.swift */,
 				858EAAD8208D149A00713305 /* HairColor.swift */,
@@ -474,6 +477,7 @@
 				858EAAF9208D149A00713305 /* Truncation.swift in Sources */,
 				858EAAF3208D149A00713305 /* Substring+Conversion.swift in Sources */,
 				858EAAF7208D149A00713305 /* IssuingCountry.swift in Sources */,
+				42CBF06D21DD1C5A005DE54D /* Race.swift in Sources */,
 				858EAAEF208D149A00713305 /* UnitConverter.swift in Sources */,
 				858EAAF4208D149A00713305 /* EyeColor.swift in Sources */,
 				858EAB01208D149A00713305 /* VersionSixParser.swift in Sources */,

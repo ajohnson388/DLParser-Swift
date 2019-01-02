@@ -120,7 +120,7 @@ public class AAMVAParser {
     
     /// The date format determined by the PDF417 data's country field.
     final var dateFormat: String {
-        guard let country = parsedCountry else {
+        guard let country: IssuingCountry = parseCategory(key: FieldKey.country) else {
             return unitedStatesDateFormat
         }
         
@@ -182,27 +182,27 @@ public class AAMVAParser {
         license.lastNameAlias = parser.parseString(key: FieldKey.lastNameAlias)
         license.suffixAlias = parser.parseString(key: FieldKey.suffixAlias)
         license.suffix = parser.parsedNameSuffix
-        license.firstNameTruncation = parser.parseTruncation(key: FieldKey.firstNameTruncation)
-        license.middleNameTruncation = parser.parseTruncation(key: FieldKey.middleNameTruncation)
-        license.lastNameTruncation = parser.parseTruncation(key: FieldKey.lastNameTruncation)
+        license.firstNameTruncation = parser.parseCategory(key: FieldKey.firstNameTruncation)
+        license.middleNameTruncation = parser.parseCategory(key: FieldKey.middleNameTruncation)
+        license.lastNameTruncation = parser.parseCategory(key: FieldKey.lastNameTruncation)
         license.expirationDate = parser.parseDate(key: FieldKey.expirationDate)
         license.issueDate = parser.parseDate(key: FieldKey.issueDate)
         license.birthdate = parser.parseDate(key: FieldKey.birthDate)
         license.hazmatExpirationDate = parser.parseDate(key: FieldKey.hazmatExpirationDate)
         license.revisionDate = parser.parseDate(key: FieldKey.revisionDate)
-        license.race = parser.parseString(key: FieldKey.race)
-        license.gender = parser.parsedGender
-        license.eyeColor = parser.parsedEyeColor
+        license.race = parser.parseCategory(key: FieldKey.race)
+        license.gender = parser.parseCategory(key: FieldKey.gender)
+        license.eyeColor = parser.parseCategory(key: FieldKey.eyeColor)
         license.height = parser.parsedHeight
         license.weight = parser.parsedWeight
-        license.hairColor = parser.parsedHairColor
+        license.hairColor = parser.parseCategory(key: FieldKey.hairColor)
         license.placeOfBirth = parser.parseString(key: FieldKey.placeOfBirth)
         license.streetAddress = parser.parseString(key: FieldKey.streetAddress)
         license.streetAddressTwo = parser.parseString(key: FieldKey.streetAddressTwo)
         license.city = parser.parseString(key: FieldKey.city)
         license.state = parser.parseString(key: FieldKey.state)
         license.postalCode = parser.parseString(key: FieldKey.postalCode)
-        license.country = parser.parsedCountry
+        license.country = parser.parseCategory(key: FieldKey.country)
         license.licenseNumber = parser.parseString(key: FieldKey.driverLicenseNumber)
         license.documentId = parser.parseString(key: FieldKey.uniqueDocumentId)
         license.auditInformation = parser.parseString(key: FieldKey.auditInformation)
@@ -261,15 +261,15 @@ public class AAMVAParser {
         return formatter.date(from: dateString)
     }
     
-    func parseTruncation(key: FieldKey) -> Truncation? {
-        guard let truncation = parseString(key: key) else {
+    func parseCategory<Category>(key: FieldKey) -> Category? where Category: StringRepresentable {
+        guard let rawValue = parseString(key: key) else {
             return nil
         }
-        return Truncation.of(truncation)
+        return Category.of(rawValue)
     }
     
     
-    // MARK: - Name Parsing
+    // MARK: - Field Parsing
     
     var parsedFirstName: String? {
         return parseString(key: FieldKey.firstName)
@@ -305,40 +305,6 @@ public class AAMVAParser {
             return nil
         }
         return NameSuffix.of(suffix)
-    }
-    
-    
-    // MARK: - Address Parsing
-
-    var parsedCountry: IssuingCountry? {
-        guard let country = parseString(key: FieldKey.country) else {
-            return nil
-        }
-        return IssuingCountry.of(country)
-    }
-    
-    
-    // MARK: - Appearance Parsing
-    
-    var parsedGender: Gender? {
-        guard let gender = parseString(key: FieldKey.gender) else {
-            return nil
-        }
-        return Gender.of(gender)
-    }
-    
-    var parsedEyeColor: EyeColor? {
-        guard let color = parseString(key: FieldKey.eyeColor) else {
-            return nil
-        }
-        return EyeColor.of(color)
-    }
-
-    var parsedHairColor: HairColor? {
-        guard let color = parseString(key: FieldKey.hairColor) else {
-            return nil
-        }
-        return HairColor.of(color)
     }
     
     /// Returns the height in inches.

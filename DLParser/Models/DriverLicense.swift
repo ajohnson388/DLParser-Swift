@@ -67,7 +67,7 @@ public struct DriverLicense: Equatable {
     // MARK: - Appearance
     
     /// The license holder's race, if any.
-    public var race: String?
+    public var race: Race?
     
     /// The license holder's gender, if any.
     public var gender: Gender?
