@@ -1,6 +1,6 @@
 //
 //  IssuingCountry.swift
-//  LicenseParser
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/12/18.
 //
@@ -8,12 +8,13 @@
 import Foundation
 
 /**
-    AAMVA Issuing Countries
- 
-     - UnitedStates: The USA
-     - Canda: Canada, eh?
+    AAMVA standard accepted issuing countries.
  */
 public enum IssuingCountry: String, StringRepresentable {
+    
+    /// United States of America
     case unitedStates = "USA"
+    
+    /// Canada
     case canada = "CAN"
 }

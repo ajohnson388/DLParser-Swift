@@ -1,6 +1,6 @@
 //
 //  NameSuffix.swift
-//  LicenseParser
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/12/18.
 //
@@ -8,31 +8,41 @@
 import Foundation
 
 /**
-     AAMVA Name Suffixes
- 
-     - Junior: Junior, Jr.
-     - Senior: Senior, Sr.
-     - First: First, I, 1st
-     - Second: Second, II, 2nd
-     - Third: Third, III, 3rd
-     - Fourth: Fourth, IV, 4th
-     - Fifth: Fifth, V, 5th
-     - Sixth: Sixth, VI, 6th
-     - Seventh: Seventh, VII, 7th
-     - Eighth: Eighth, VIII, 8th
-     - Ninth: Ninth, IX, 9th
+     AAMVA standard accepted name suffixes.
  */
 public enum NameSuffix {
+    
+    /// Junior
     case junior
+    
+    /// Senior
     case senior
+    
+    /// The first
     case first
+    
+    /// The second
     case second
+    
+    /// The third
     case third
+    
+    /// The fourth
     case fourth
+    
+    /// The fifth
     case fifth
+    
+    /// The sixth
     case sixth
+    
+    /// The seventh
     case seventh
+    
+    /// The eighth
     case eighth
+    
+    /// The ninth
     case ninth
 }
 

@@ -1,17 +1,17 @@
 //
 //  VersionThreeParser.swift
-//  Pods
+//  DLParser
 //
-//  Created by Clayton Lengel-Zigich on 7/11/16.
+//  Created by Andrew Johnson on 3/19/18.
 //
 //
 
 import Foundation
 
 /**
-    Published 03-2005.
+    A parser for the AAMVA standard published 03/2005.
  */
-class VersionThreeFieldParser: AAMVAParser {
+final class VersionThreeFieldParser: AAMVAParser {
 
     override init(data: String) {
         super.init(data: data)

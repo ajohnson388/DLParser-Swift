@@ -1,17 +1,17 @@
 //
 //  VersionFourParser.swift
-//  Pods
+//  DLParser
 //
-//  Created by Clayton Lengel-Zigich on 6/15/16.
+//  Created by Andrew Johnson on 3/19/18.
 //
 //
 
 import Foundation
 
 /**
-    Published 07-2009.
+    A parser for the AAMVA standard published 07/2009.
  */
-class VersionFourFieldParser: AAMVAParser {
+final class VersionFourFieldParser: AAMVAParser {
 
     override init(data: String) {
         super.init(data: data)

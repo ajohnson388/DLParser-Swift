@@ -1,6 +1,6 @@
 //
 //  Truncation.swift
-//  LicenseParser
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/12/18.
 //
@@ -8,12 +8,13 @@
 import Foundation
 
 /**
-     AAMVA Name Truncations
- 
-     - Truncated: The name was truncated
-     - None: The name was not truncated
+     AAMVA standard accepted truncation types.
  */
 public enum Truncation: String, StringRepresentable {
+    
+    /// Indicates a name is truncated
     case truncated = "T"
+    
+    /// Indicates a name is not truncated
     case none = "N"
 }

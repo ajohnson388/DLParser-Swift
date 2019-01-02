@@ -1,6 +1,6 @@
 //
-//  ParsedDriverLicense.swift
-//  LicenseParser
+//  DriverLicense.swift
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/24/18.
 //

@@ -1,6 +1,6 @@
 //
 //  WeightRange.swift
-//  LicenseParser
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/26/18.
 //
@@ -12,8 +12,10 @@ import Foundation
  */
 public struct WeightRange: Equatable {
     
+    /// The weight range classifier defined in the license PDF417 data
     public var rank: Int
     
+    /// The weight range for the given rank in kilograms.
     public var kilograms: CountableClosedRange<Int> {
         switch rank {
         case 1: return 32...45
@@ -29,6 +31,7 @@ public struct WeightRange: Equatable {
         }
     }
     
+    /// The weight range for the given rank in pounds.
     public var pounds: CountableClosedRange<Int> {
         switch rank {
         case 1: return 71...100

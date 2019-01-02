@@ -1,17 +1,17 @@
 //
-//  VersionOneFieldParser.swift
-//  Pods
+//  VersionOneParser.swift
+//  DLParser
 //
-//  Created by Clayton Lengel-Zigich on 6/10/16.
+//  Created by Andrew Johnson on 3/19/18.
 //
 //
 
 import Foundation
 
 /**
-    Published 2000.
+    A parser for the AAMVA standard published in 2000.
  */
-class VersionOneParser: AAMVAParser {
+final class VersionOneParser: AAMVAParser {
     
     override init(data: String) {
         super.init(data: data)
@@ -57,6 +57,14 @@ class VersionOneParser: AAMVAParser {
         return parseString(key: FieldKey.heightCentimeters)?.double
             ?? parsedInches
     }
+    
+    override var parsedNameSuffix: NameSuffix? {
+        guard let suffix = parseString(key: FieldKey.suffix)
+            ?? parseDriverLicenseName(key: FieldKey.suffix) else {
+                return nil
+        }
+        return NameSuffix.of(suffix)
+    }
 
     private var parsedInches: Double? {
         guard let feetInches = parseString(key: FieldKey.heightInches),
@@ -73,16 +81,7 @@ class VersionOneParser: AAMVAParser {
         }
         return inches + feet * 12
     }
-
-    override var parsedNameSuffix: NameSuffix? {
-        guard let suffix = parseString(key: FieldKey.suffix)
-            ?? parseDriverLicenseName(key: FieldKey.suffix) else {
-            return nil
-        }
-        return NameSuffix.of(suffix)
-    }
-
-    // TODO: This does not parse out the middle name correctly
+    
     private func parseDriverLicenseName(key: FieldKey) -> String? {
         // Get the name components of the driver license
         guard let driverLicenseName = parseString(key: FieldKey.driverLicenseName) else {
@@ -94,11 +93,11 @@ class VersionOneParser: AAMVAParser {
         switch key {
         case .lastName:
             return nameComponents.first
-        case .firstName where nameComponents.count > 2:
+        case .firstName where nameComponents.count >= 2:
             return nameComponents[1]
-        case .middleName where nameComponents.count > 3:
+        case .middleName where nameComponents.count >= 3:
             return nameComponents[2]
-        case .suffix where nameComponents.count > 4:
+        case .suffix where nameComponents.count >= 4:
             return nameComponents[3]
         default:
             return nil

@@ -1,10 +1,17 @@
+//
+//  AAMVAParser.swift
+//  DLParser
+//
+//  Created by Andrew Johnson on 3/19/18.
+//
+//
+
 import Foundation
 
 /**
     An abstract factory and base class for parsing driver license data
     that is AAMVA compliant. The class is responsible for parsing data
     on the detected version number.
-    A basic Field Parsing implementation that can be extended to support multiple AAMVA Versions
 */
 public class AAMVAParser {
     
@@ -69,9 +76,8 @@ public class AAMVAParser {
         FieldKey.givenName: "DCT",
     ]
 
-    /**
-        The raw data from an AAMVA spec adhering PDF-417 barcode
-     */
+
+    /// The raw data from an AAMVA specification adhering to the PDF-417 barcode standard.
     public final let data: String
     
     /**
@@ -87,9 +93,7 @@ public class AAMVAParser {
         return match.integerValue
     }
     
-    /**
-        The number of subfiles found in the driver license data.
-     */
+    /// The number of subfiles found in the driver license data.
     public var subfileCount: Int? {
         let match = NSRegularExpression.firstMatch(pattern: "\\d{8}(\\d{2})\\w+",
                                                    data: data) as NSString?
@@ -114,9 +118,7 @@ public class AAMVAParser {
         return "yyyyMMdd"
     }
     
-    /**
-        The date format determined by the PDF417 data's country field
-    */
+    /// The date format determined by the PDF417 data's country field.
     public var dateFormat: String {
         guard let country = parsedCountry else {
             return unitedStatesDateFormat
@@ -152,8 +154,10 @@ public class AAMVAParser {
     // MARK: - Object Lifecycle
     
     /**
-        Initializes a new a driver license parser with the given license
-        data.
+        Initializes a new a driver license parser with the given license data.
+     
+        - parameters:
+            - data: The PDF417 data string that was decoded from the barcode.
      */
     public init(data: String) {
         self.data = data
@@ -337,9 +341,7 @@ public class AAMVAParser {
         return HairColor.of(color)
     }
     
-    /**
-        Returns the height in inches.
-     */
+    /// Returns the height in inches.
     var parsedHeight: Double? {
         guard
         let heightString = parseString(key: FieldKey.heightInches)?.split(separator: " ").first,
@@ -351,9 +353,7 @@ public class AAMVAParser {
             ? UnitConverter.inches(from: height) : height
     }
     
-    /**
-        Returns the weight range or exact weight.
-     */
+    /// Returns the weight range or exact weight.
     var parsedWeight: Weight {
         var weight = Weight()
         

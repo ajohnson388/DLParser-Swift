@@ -1,17 +1,17 @@
 //
 //  VersionTwoParser.swift
-//  Pods
+//  DLParser
 //
-//  Created by Clayton Lengel-Zigich on 7/11/16.
+//  Created by Andrew Johnson on 3/19/18.
 //
 //
 
 import Foundation
 
 /**
-    Published 09-2003.
+    A parser for the AAMVA standard published 09/2003.
  */
-class VersionTwoFieldParser: AAMVAParser {
+final class VersionTwoFieldParser: AAMVAParser {
     
     override init(data: String) {
         super.init(data: data)

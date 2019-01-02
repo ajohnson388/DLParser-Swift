@@ -1,6 +1,6 @@
 //
 //  EyeColor.swift
-//  LicenseParser
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/12/18.
 //
@@ -8,26 +8,34 @@
 import Foundation
 
 /**
-     AAMVA Eye Colors
- 
-     - Black: Black eyes
-     - Blue: Blue eyes
-     - Brown: Brown eyes
-     - Gray: Gray eyes
-     - Green: Green eyes
-     - Hazel: Hazel eyes
-     - Maroon: Maroon eyes
-     - Pink: Pink eyes
-     - Dichromatic: Dichromatic eyes
+     AAMVA standard accepted eye colors.
  */
 public enum EyeColor: String, StringRepresentable {
+    
+    /// Black eyes
     case black = "BLK"
+    
+    /// Blue eyes
     case blue = "BLU"
+    
+    /// Brown eyes
     case brown = "BRO"
+    
+    /// Gray eyes
     case gray = "GRY"
+    
+    /// Green eyes
     case green = "GRN"
+    
+    /// Hazel eyes
     case hazel = "HAZ"
+    
+    /// Maroon eyes
     case maroon = "MAR"
+    
+    /// Pink eyes
     case pink = "PNK"
+    
+    /// Dichromatic eyes
     case dichromatic = "DIC"
 }

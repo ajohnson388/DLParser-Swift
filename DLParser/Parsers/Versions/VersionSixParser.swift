@@ -1,6 +1,6 @@
 //
 //  VersionSixParser.swift
-//  DLParserTests
+//  DLParser
 //
 //  Created by Andrew Johnson on 3/19/18.
 //
@@ -8,9 +8,9 @@
 import Foundation
 
 /**
-    Published 07-2011.
+    A parser for the AAMVA standard published 07/2011.
  */
-class VersionSixParser: AAMVAParser {
+final class VersionSixParser: AAMVAParser {
 
     override init(data: String) {
         super.init(data: data)
