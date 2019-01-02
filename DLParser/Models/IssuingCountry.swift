@@ -13,7 +13,7 @@ import Foundation
      - UnitedStates: The USA
      - Canda: Canada, eh?
  */
-public enum IssuingCountry: String, StringRepresntable {
+public enum IssuingCountry: String, StringRepresentable {
     case unitedStates = "USA"
     case canada = "CAN"
 }

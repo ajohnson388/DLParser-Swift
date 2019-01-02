@@ -28,6 +28,7 @@ public class AAMVAParser {
         FieldKey.gender: "DBC",
         FieldKey.eyeColor: "DAY",
         FieldKey.heightInches: "DAU",
+        FieldKey.heightCentimeters: "DAV",
         FieldKey.streetAddress: "DAG",
         FieldKey.city: "DAI",
         FieldKey.state: "DAJ",
@@ -45,7 +46,8 @@ public class AAMVAParser {
         FieldKey.inventoryControlNumber: "DCK",
         FieldKey.lastNameAlias: "DBN",
         FieldKey.givenNameAlias: "DBG",
-        FieldKey.suffix: "DBS", // TODO: Or DCU
+        FieldKey.suffixAlias: "DBS",
+        FieldKey.suffix: "DCU",
         FieldKey.weightRange: "DCE",
         FieldKey.race: "DCL",
         FieldKey.standardVehicleCode: "DCM",
@@ -172,7 +174,6 @@ public class AAMVAParser {
         license.firstName = parser.parsedFirstName
         license.middleNames = parser.parsedMiddleNames
         license.lastName = parser.parsedLastName
-        license.firstNameAlias = parser.parseString(key: FieldKey.firstNameAlias)
         license.givenNameAlias = parser.parseString(key: FieldKey.givenNameAlias)
         license.lastNameAlias = parser.parseString(key: FieldKey.lastNameAlias)
         license.suffixAlias = parser.parseString(key: FieldKey.suffixAlias)
@@ -228,17 +229,14 @@ public class AAMVAParser {
         guard let identifier = fields[key] else {
             return nil
         }
-        return NSRegularExpression.firstMatch(pattern: "\(identifier)(.+)\\b", data: data)
+        
+        // Check for field by searching for the beginning carriage return or the beginning of the DL subfile
+        return NSRegularExpression.firstMatch(pattern: "\n\(identifier)(.*?)\\n", data: data)
+            ?? NSRegularExpression.firstMatch(pattern: "DL\(identifier)(.*?)\\n", data: data)
     }
     
     func parseDouble(key: FieldKey) -> Double? {
-        guard
-        let identifier = fields[key],
-        let result = NSRegularExpression.firstMatch(pattern:
-            "\(identifier)(\\w+)\\b", data: data) else {
-            return nil
-        }
-        return Double(result)
+        return parseString(key: key)?.double
     }
     
     func parseBoolean(key: FieldKey) -> Bool? {
@@ -276,8 +274,8 @@ public class AAMVAParser {
     }
     
     var parsedMiddleNames: [String] {
-        if let middleName = parseString(key: FieldKey.middleName) {
-            return [middleName]
+        if let middleNames = parseString(key: FieldKey.middleName)?.trimmedSplitByComma {
+            return middleNames
         }
         
         if let givenName = parseString(key: FieldKey.givenName) {
@@ -357,18 +355,17 @@ public class AAMVAParser {
         Returns the weight range or exact weight.
      */
     var parsedWeight: Weight {
-        if let pounds = parseString(key: FieldKey.weightPounds)?.double {
-            return Weight(range: nil, pounds: pounds)
-        }
+        var weight = Weight()
         
-        if let kilograms = parseString(key: FieldKey.weightKilograms)?.double {
-            return Weight(range: nil, pounds: UnitConverter.pounds(from: kilograms))
+        if let pounds = parseString(key: FieldKey.weightPounds)?.double {
+            weight.pounds = pounds
+        } else if let kilograms = parseString(key: FieldKey.weightKilograms)?.double {
+            weight.pounds = UnitConverter.pounds(from: kilograms)
         }
         
         if let weightRangeRank = parseString(key: FieldKey.weightRange)?.double {
-            let weightRange =  WeightRange(rank: Int(weightRangeRank))
-            return Weight(range: weightRange, pounds: nil)
+            weight.range = WeightRange(rank: Int(weightRangeRank))
         }
-        return Weight()
+        return weight
     }
 }

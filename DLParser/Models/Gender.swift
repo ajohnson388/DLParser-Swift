@@ -13,7 +13,7 @@ import Foundation
      - Male: Male
      - Female: Female
  */
-public enum Gender: String, StringRepresntable {
+public enum Gender: String, StringRepresentable {
     case male = "1"
     case female = "2"
 }

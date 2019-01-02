@@ -39,7 +39,7 @@ public enum NameSuffix {
 
 // MARK: - Parsing
 
-extension NameSuffix: StringRepresntable {
+extension NameSuffix: StringRepresentable {
     
     static func of(_ rawValue: String) -> NameSuffix? {
         switch rawValue {

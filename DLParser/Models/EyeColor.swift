@@ -20,7 +20,7 @@ import Foundation
      - Pink: Pink eyes
      - Dichromatic: Dichromatic eyes
  */
-public enum EyeColor: String, StringRepresntable {
+public enum EyeColor: String, StringRepresentable {
     case black = "BLK"
     case blue = "BLU"
     case brown = "BRO"

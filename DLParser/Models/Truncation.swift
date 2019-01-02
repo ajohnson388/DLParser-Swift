@@ -13,7 +13,7 @@ import Foundation
      - Truncated: The name was truncated
      - None: The name was not truncated
  */
-public enum Truncation: String, StringRepresntable {
+public enum Truncation: String, StringRepresentable {
     case truncated = "T"
     case none = "N"
 }

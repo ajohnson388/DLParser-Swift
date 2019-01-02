@@ -24,9 +24,6 @@ public struct DriverLicense: Equatable {
     /// The license holder's last name, if any.
     public var lastName: String?
     
-    /// The license holder's alias of the first name, if any.
-    public var firstNameAlias: String?
-    
     /// The license holder's alias of the given name, if any.
     public var givenNameAlias: String?
     

@@ -1,5 +1,5 @@
 //
-//  Lookupable.swift
+//  StringRepresentable.swift
 //  DLParser
 //
 //  Created by Andrew Johnson on 12/30/18.
@@ -8,13 +8,7 @@
 
 import Foundation
 
-protocol StringRepresntable: CaseIterable {
-    static func of(_ rawValue: String) -> Self?
-}
-
-extension StringRepresntable where Self: RawRepresentable {
+protocol StringRepresentable: CaseIterable {
     
-    static func of(_ rawValue: String) -> Self? {
-        return Self.of(rawValue)
-    }
+    static func of(_ rawValue: String) -> Self?
 }

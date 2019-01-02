@@ -19,7 +19,7 @@ import Foundation
      - Sandy: Sandy hair
      - White: White hair
  */
-public enum HairColor: String, StringRepresntable {
+public enum HairColor: String, StringRepresentable {
     case bald = "BAL"
     case black = "BLK"
     case blond = "BLN"

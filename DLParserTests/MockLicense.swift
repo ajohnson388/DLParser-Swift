@@ -17,12 +17,11 @@ struct MockLicenseFactory {
         return formatter.date(from: dateString)!
     }
     
-    private static func makeBaseLicense(withDateFormat dateFormat: String = "MMDDCCYY") -> DriverLicense {
+    private static func makeBaseLicense(withDateFormat dateFormat: String = "MMddyyyy") -> DriverLicense {
         var license = DriverLicense()
         license.firstName = "firstName"
         license.middleNames = ["middleName", "middleName"]
         license.lastName = "lastName"
-        license.firstNameAlias = "firstNameAlias"
         license.givenNameAlias = "givenNameAlias"
         license.lastNameAlias = "lastNameAlias"
         license.suffixAlias = "suffixAlias"
@@ -39,7 +38,7 @@ struct MockLicenseFactory {
         license.gender = Gender.male
         license.eyeColor = EyeColor.brown
         license.height = 52
-        license.weight = Weight(range: WeightRange(rank: 2), pounds: 55)
+        license.weight = Weight(range: WeightRange(rank: 2), pounds: 44)
         license.hairColor = HairColor.black
         license.placeOfBirth = "placeOfBirth"
         license.streetAddress = "streetAddress"
@@ -70,7 +69,9 @@ struct MockLicenseFactory {
     }
     
     static var versionOneLicense: DriverLicense {
-        var license = makeBaseLicense(withDateFormat: "CCYYMMDD")
+        var license = makeBaseLicense(withDateFormat: "yyyyMMdd")
+        license.version = 1
+        license.federalVehicleCode = nil
         license.jurisdictionVehicleClass = nil
         license.jurisdictionRestrictionCode = nil
         license.jurisdictionEndorsementCode = nil
@@ -96,6 +97,7 @@ struct MockLicenseFactory {
     
     static var versionTwoLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 2
         license.middleNames = []
         license.lastNameTruncation = nil
         license.firstNameTruncation = nil
@@ -115,6 +117,7 @@ struct MockLicenseFactory {
     
     static var versionThreeLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 3
         license.middleNames = []
         license.lastNameTruncation = nil
         license.firstNameTruncation = nil
@@ -131,6 +134,7 @@ struct MockLicenseFactory {
     
     static var versionFourLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 4
         license.isOrganDonor = nil
         license.isVeteran = nil
         license.federalVehicleCode = nil
@@ -139,6 +143,7 @@ struct MockLicenseFactory {
     
     static var versionFiveLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 5
         license.isOrganDonor = nil
         license.isVeteran = nil
         license.federalVehicleCode = nil
@@ -147,6 +152,7 @@ struct MockLicenseFactory {
     
     static var versionSixLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 6
         license.isVeteran = nil
         license.federalVehicleCode = nil
         return license
@@ -154,18 +160,21 @@ struct MockLicenseFactory {
     
     static var versionSevenLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 7
         license.federalVehicleCode = nil
         return license
     }
     
     static var versionEightLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 8
         license.federalVehicleCode = nil
         return license
     }
     
     static var versionNineLicense: DriverLicense {
         var license = makeBaseLicense()
+        license.version = 9
         license.federalVehicleCode = nil
         return license
     }
