@@ -1,60 +1,62 @@
 //
-//  ScannerViewController.swift
+//  ScannerPresenter.swift
 //  DLParser Example
 //
-//  Created by Andrew Johnson on 4/28/18.
-//  Copyright © 2018 Andrew Johnson. All rights reserved.
+//  Created by Andrew Johnson on 3/6/19.
+//  Copyright © 2019 Andrew Johnson. All rights reserved.
 //
 
+import Foundation
 import UIKit
-import GoogleMobileVision
 import AVFoundation
+import GoogleMobileVision
 import DLParser
 
-final class ScannerViewController: UIViewController {
+/// The delegate for presenting results from the `ScannerPresenter`.
+protocol ScannerPresenterDelegate: class {
+    
+    /// Called when a valid driver license barcode is detected in the video camera.
+    ///
+    /// - Parameter license: The processed license detected in the video camera.
+    func didFindDriverLicense(_ license: DriverLicense)
+}
+
+/// The presenter for the `ScannerViewController` that is responsible for processing logic.
+final class ScannerPresenter: NSObject {
     
     // MARK: - Properties
     
-    private let videoSession = AVCaptureSession()
+    weak var delegate: ScannerPresenterDelegate?
+    
+    /// The handle on the video camera.
+    let videoSession = AVCaptureSession()
+    
     private lazy var barCodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode,
                                                    options: nil)
-    private lazy var previewLayer: AVCaptureVideoPreviewLayer = {
-        let layer = AVCaptureVideoPreviewLayer(session: self.videoSession)
-        layer.backgroundColor = UIColor.black.cgColor
-        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        return layer
-    }()
     
-    
+
     // MARK: - Lifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init() {
+        super.init()
         configureVideoSession()
         configureVideoOutput()
-        layoutPreviewLayer()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        videoSession.startRunning()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        videoSession.stopRunning()
-    }
-    
-    func layoutPreviewLayer() {
-        view.layer.masksToBounds = true
-        previewLayer.frame = view.bounds
-        previewLayer.position = CGPoint(x: previewLayer.frame.midX,
-                                        y: previewLayer.frame.midY)
-        view.layer.addSublayer(previewLayer)
     }
     
     
-    func configureVideoSession() {
+    // MARK: - Public Functions
+    
+    /// Toggles the video camera on or off.
+    ///
+    /// - Parameter isStarting: True, if the video camera should be active.
+    func startVideo(_ isStarting: Bool) {
+        isStarting ? videoSession.startRunning() : videoSession.stopRunning()
+    }
+    
+    
+    // MARK: - Helper Functions
+    
+    private func configureVideoSession() {
         // Start the configuration
         defer { videoSession.commitConfiguration() }
         videoSession.beginConfiguration()
@@ -70,7 +72,7 @@ final class ScannerViewController: UIViewController {
         videoSession.addInput(deviceInput)
     }
     
-    func configureVideoOutput() {
+    private func configureVideoOutput() {
         // Create the desired video output settings
         let videoDataOutput = AVCaptureVideoDataOutput()
         videoDataOutput.alwaysDiscardsLateVideoFrames = true
@@ -85,7 +87,7 @@ final class ScannerViewController: UIViewController {
         }
     }
     
-    func getDeviceInput(forPosition position: AVCaptureDevice.Position) -> AVCaptureDeviceInput? {
+    private func getDeviceInput(forPosition position: AVCaptureDevice.Position) -> AVCaptureDeviceInput? {
         let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera],
                                                                 mediaType: AVMediaType.video,
                                                                 position: position)
@@ -121,22 +123,14 @@ final class ScannerViewController: UIViewController {
         guard let license = licenses.first(where: { $0.isAcceptable }) else {
             return
         }
-        let output = String(describing: license).replacingOccurrences(of: ", ", with: "\n")
-        playFeedback()
-        print(output)
-    }
-    
-    func playFeedback() {
-        DispatchQueue.main.async {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-        }
+        delegate?.didFindDriverLicense(license)
     }
 }
 
 
 // MARK: - Sample Buffer Delegate
 
-extension ScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension ScannerPresenter: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput,
                        didOutput sampleBuffer: CMSampleBuffer,
@@ -147,5 +141,3 @@ extension ScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         findDriverLicense(inImage: image)
     }
 }
-
-
