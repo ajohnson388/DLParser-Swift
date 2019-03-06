@@ -9,7 +9,7 @@ PODS:
     - GoogleMobileVision/Detector (~> 1.2)
   - GoogleMobileVision/Detector (1.2.0):
     - GoogleToolboxForMac/Logger (~> 2.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.1)
   - GoogleMobileVision/FaceDetector (1.2.0):
@@ -21,13 +21,20 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.4)
   - GoogleToolboxForMac/Logger (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
-  - GoogleToolboxForMac/NSData+zlib (2.1.4):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GTMSessionFetcher/Core (1.1.15)
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
   - GoogleMobileVision (~> 1.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GoogleMobileVision
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - Protobuf
 
 SPEC CHECKSUMS:
   GoogleMobileVision: 40dff1d2943fc73a597377e8e79e46aa970868b2
@@ -37,4 +44,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 85bdfcf787a7a3486c2814ea7913c4ddc89754c6
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

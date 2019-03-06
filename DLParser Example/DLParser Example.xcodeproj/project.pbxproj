@@ -398,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				DEVELOPMENT_TEAM = 5YPTGTC4JC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
@@ -429,7 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P9K3JNL3SV;
+				DEVELOPMENT_TEAM = 5YPTGTC4JC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",

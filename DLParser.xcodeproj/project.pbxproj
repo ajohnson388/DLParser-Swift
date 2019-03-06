@@ -277,7 +277,6 @@
 				858EAAAA208D142400713305 /* Frameworks */,
 				858EAAAB208D142400713305 /* Headers */,
 				858EAAAC208D142400713305 /* Resources */,
-				DD706F97D4B8E26D95BC6447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,8 +295,6 @@
 				858EAAB3208D142400713305 /* Sources */,
 				858EAAB4208D142400713305 /* Frameworks */,
 				858EAAB5208D142400713305 /* Resources */,
-				A77C41EA9E76E667AD224DF8 /* [CP] Embed Pods Frameworks */,
-				7B631D8ECD3E5B61159F2710 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,68 +397,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B631D8ECD3E5B61159F2710 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A77C41EA9E76E667AD224DF8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD706F97D4B8E26D95BC6447 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DLParser/Pods-DLParser-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DLParser/Pods-DLParser-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
