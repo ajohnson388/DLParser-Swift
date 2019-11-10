@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B7FC53144BA137FB0674E16 /* Pods_DLParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */; };
 		4271947721D98A6D00774CA1 /* CaseIterable+RawValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271947621D98A6D00774CA1 /* CaseIterable+RawValue.swift */; };
 		4271947921D98C9E00774CA1 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271947821D98C9E00774CA1 /* StringRepresentable.swift */; };
 		42C37F8A21DBD7B500D6FF02 /* MockLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C37F8921DBD7B500D6FF02 /* MockLicense.swift */; };
@@ -43,7 +42,7 @@
 		858EAB01208D149A00713305 /* VersionSixParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE5208D149A00713305 /* VersionSixParser.swift */; };
 		858EAB02208D149A00713305 /* VersionThreeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE6208D149A00713305 /* VersionThreeParser.swift */; };
 		858EAB03208D149A00713305 /* VersionTwoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE7208D149A00713305 /* VersionTwoParser.swift */; };
-		B119375A80441BE18D86A8D3 /* Pods_DLParserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */; };
+		F2DBEDC45A1E3655AD620B8D /* libPods-DLParserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24AFC098DA20E017A4A4ABA /* libPods-DLParserTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParser/Pods-DLParser.debug.xcconfig"; sourceTree = "<group>"; };
 		283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.release.xcconfig"; sourceTree = "<group>"; };
 		4271947621D98A6D00774CA1 /* CaseIterable+RawValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+RawValue.swift"; sourceTree = "<group>"; };
 		4271947821D98C9E00774CA1 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 		42C963B421DBF5C9001FB29F /* BaseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParserTests.swift; sourceTree = "<group>"; };
 		42CBF06C21DD1C5A005DE54D /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		42CBF06E21DD2044005DE54D /* Compliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compliance.swift; sourceTree = "<group>"; };
-		519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLParserTests/Pods-DLParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		858EAAAE208D142400713305 /* DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858EAAB1208D142400713305 /* DLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLParser.h; sourceTree = "<group>"; };
@@ -99,8 +96,7 @@
 		858EAAE5208D149A00713305 /* VersionSixParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSixParser.swift; sourceTree = "<group>"; };
 		858EAAE6208D149A00713305 /* VersionThreeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionThreeParser.swift; sourceTree = "<group>"; };
 		858EAAE7208D149A00713305 /* VersionTwoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionTwoParser.swift; sourceTree = "<group>"; };
-		85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLParser.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLParser/Pods-DLParser.release.xcconfig"; sourceTree = "<group>"; };
-		FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24AFC098DA20E017A4A4ABA /* libPods-DLParserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLParserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B7FC53144BA137FB0674E16 /* Pods_DLParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858EAAB8208D142400713305 /* DLParser.framework in Frameworks */,
-				B119375A80441BE18D86A8D3 /* Pods_DLParserTests.framework in Frameworks */,
+				F2DBEDC45A1E3655AD620B8D /* libPods-DLParserTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +122,6 @@
 		487711F73DD1263A2174DB50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */,
-				85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */,
 				5EA6C72EC97DE894BB776434 /* Pods-DLParserTests.debug.xcconfig */,
 				283BD6FD1D2EAA591D8665AD /* Pods-DLParserTests.release.xcconfig */,
 			);
@@ -248,8 +241,7 @@
 		A6109A85ABEE9F2D967C69AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FCCE39CFD0BA6DEFD8CB00AF /* Pods_DLParser.framework */,
-				519E00169B2E87B4929F9682 /* Pods_DLParserTests.framework */,
+				B24AFC098DA20E017A4A4ABA /* libPods-DLParserTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,7 +264,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858EAAC2208D142400713305 /* Build configuration list for PBXNativeTarget "DLParser" */;
 			buildPhases = (
-				626D710DB8D4D8FDAB6D7AD1 /* [CP] Check Pods Manifest.lock */,
 				858EAAA9208D142400713305 /* Sources */,
 				858EAAAA208D142400713305 /* Frameworks */,
 				858EAAAB208D142400713305 /* Headers */,
@@ -375,24 +366,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DLParserTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		626D710DB8D4D8FDAB6D7AD1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DLParser-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,7 +548,6 @@
 		};
 		858EAAC3208D142400713305 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C1A74102121AD63298EC8E1 /* Pods-DLParser.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -598,7 +570,6 @@
 		};
 		858EAAC4208D142400713305 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85A7E5A3BD588B5FFEA3A2F4 /* Pods-DLParser.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

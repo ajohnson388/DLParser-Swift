@@ -1,30 +1,30 @@
 PODS:
-  - GoogleMobileVision (1.2.0):
-    - GoogleMobileVision/BarcodeDetector (= 1.2.0)
-    - GoogleMobileVision/Detector (= 1.2.0)
-    - GoogleMobileVision/FaceDetector (= 1.2.0)
-    - GoogleMobileVision/MVDataOutput (= 1.2.0)
-    - GoogleMobileVision/TextDetector (= 1.2.0)
-  - GoogleMobileVision/BarcodeDetector (1.2.0):
-    - GoogleMobileVision/Detector (~> 1.2)
-  - GoogleMobileVision/Detector (1.2.0):
+  - GoogleMobileVision (1.6.0):
+    - GoogleMobileVision/BarcodeDetector (= 1.6.0)
+    - GoogleMobileVision/Detector (= 1.6.0)
+    - GoogleMobileVision/FaceDetector (= 1.6.0)
+    - GoogleMobileVision/LabelDetector (= 1.6.0)
+    - GoogleMobileVision/TextDetector (= 1.6.0)
+  - GoogleMobileVision/BarcodeDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleMobileVision/Detector (1.6.0):
     - GoogleToolboxForMac/Logger (~> 2.1)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.1)
-  - GoogleMobileVision/FaceDetector (1.2.0):
-    - GoogleMobileVision/Detector (~> 1.2)
-  - GoogleMobileVision/MVDataOutput (1.2.0):
-    - GoogleMobileVision/Detector (~> 1.2)
-  - GoogleMobileVision/TextDetector (1.2.0):
-    - GoogleMobileVision/Detector (~> 1.2)
-  - GoogleToolboxForMac/Defines (2.1.4)
-  - GoogleToolboxForMac/Logger (2.1.4):
-    - GoogleToolboxForMac/Defines (= 2.1.4)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
-    - GoogleToolboxForMac/Defines (= 2.1.4)
-  - GTMSessionFetcher/Core (1.1.15)
-  - Protobuf (3.5.0)
+  - GoogleMobileVision/FaceDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleMobileVision/LabelDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleMobileVision/TextDetector (1.6.0):
+    - GoogleMobileVision/Detector (~> 1.6)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - GoogleToolboxForMac/Logger (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - GTMSessionFetcher/Core (1.2.2)
+  - Protobuf (3.8.0)
 
 DEPENDENCIES:
   - GoogleMobileVision (~> 1.2)
@@ -37,11 +37,11 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
-  GoogleMobileVision: 40dff1d2943fc73a597377e8e79e46aa970868b2
-  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
-  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
-  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  GoogleMobileVision: 31cfb4319fd0c03d80105680abd9eae9da5e3b47
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: 85bdfcf787a7a3486c2814ea7913c4ddc89754c6
+PODFILE CHECKSUM: d5827eee17bff7f18eaf16b2b7bdea07a5cc8bee
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.7.2
