@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4223C0E8237A249B001A32FE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				858EAABB208D142400713305 /* DLParserTests */,
+				858EAAB0208D142400713305 /* DLParser */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		487711F73DD1263A2174DB50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +140,7 @@
 		858EAAA4208D142400713305 = {
 			isa = PBXGroup;
 			children = (
-				858EAAB0208D142400713305 /* DLParser */,
-				858EAABB208D142400713305 /* DLParserTests */,
+				4223C0E8237A249B001A32FE /* Sources */,
 				858EAAAF208D142400713305 /* Products */,
 				487711F73DD1263A2174DB50 /* Pods */,
 				A6109A85ABEE9F2D967C69AE /* Frameworks */,
@@ -563,7 +571,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DLParser/Info.plist;
+				INFOPLIST_FILE = Sources/DLParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -585,7 +593,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DLParser/Info.plist;
+				INFOPLIST_FILE = Sources/DLParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -604,7 +612,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DLParserTests/Info.plist;
+				INFOPLIST_FILE = Sources/DLParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -621,7 +629,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DLParserTests/Info.plist;
+				INFOPLIST_FILE = Sources/DLParserTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjohnson.DLParserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
