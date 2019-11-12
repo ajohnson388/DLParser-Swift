@@ -2,6 +2,12 @@
 
 Changes are welcomed by everyone. Please review the contributing section in the [README](README.md).
 
+## 3.0.0 - November 11, 2019
+* Fixed some Xcode warnings.
+* Added Carthage support.
+* Added SPM support.
+* Upgraded to Swift 5.1.
+
 ## 2.0.0 - January 2, 2019
 
 ### Codebase improvements

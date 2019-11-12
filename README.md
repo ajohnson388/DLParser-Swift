@@ -20,14 +20,28 @@ supports all AAMVA versions and AAMVA defined fields.
 ## Requirements
 
 - iOS 10.0+
-- Swift 4.2
-- Xcode 10.1
+- Swift 5.1
+- Xcode 11
 - Cocoapods
 
 ## Cocoapod Installation
 
 ```ruby
-pod 'DLParser', '~> 2.0'
+pod 'DLParser', '~> 3.0'
+```
+
+## Carthage Installation
+
+```ruby
+github "ajohnson388/DLParser" "3.0"
+```
+
+## SPM Installation
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/ajohnson388/DLParser-Swift.git", from: "3.0")
+]
 ```
 
 ## Sample Installation
@@ -61,7 +75,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/ajohnson388/](https://github.com/ajohnson388/)
 
-[swift-image]:https://img.shields.io/badge/swift-4.2-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-5.1-orange.svg
 [swift-url]: https://swift.org/
 [test-coverage-image]:https://img.shields.io/badge/Coverage-80%25-orange.svg
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
