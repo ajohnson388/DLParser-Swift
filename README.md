@@ -33,7 +33,7 @@ pod 'DLParser', '~> 3.0'
 ## Carthage Installation
 
 ```ruby
-github "ajohnson388/DLParser"
+github "ajohnson388/DLParser-Swift"
 ```
 
 ## SPM Installation
