@@ -76,7 +76,7 @@ final class VersionOneParser: AAMVAParser {
 
         guard
         let feet = feetInches[feetInches.startIndex].string.double,
-        let inches = feetInches[inchesStartIndex...feetInches.endIndex].string.double else {
+        let inches = feetInches[inchesStartIndex..<feetInches.endIndex].string.double else {
             return nil
         }
         return inches + feet * 12
