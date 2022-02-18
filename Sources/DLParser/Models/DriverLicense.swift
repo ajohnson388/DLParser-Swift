@@ -62,8 +62,17 @@ public struct DriverLicense: Equatable {
     
     /// The revision date of the license, if any.
     public var revisionDate: Date?
-    
-    
+
+    /// The license holder's eighteenth birth date, if supported and under eighteen.
+    public var underEighteenUtilDate: Date?
+
+    /// The license holder's nineteenth birth date, if supported and under nineteen.
+    public var underNineteenUtilDate: Date?
+
+    /// The license holder's twenty-first birth date, if supported and under twenty-one.
+    public var underTwentyOneUtilDate: Date?
+
+
     // MARK: - Appearance
     
     /// The license holder's race, if any.

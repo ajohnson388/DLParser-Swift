@@ -36,6 +36,9 @@ public enum FieldKey: String, Equatable {
     case birthDate
     case hazmatExpirationDate
     case revisionDate
+    case underEighteenUntilDate
+    case underNineteenUntilDate
+    case underTwentyOneUntilDate
     
     
     // MARK: - Appearance
