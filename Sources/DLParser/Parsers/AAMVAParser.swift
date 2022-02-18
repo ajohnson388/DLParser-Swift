@@ -74,8 +74,10 @@ public class AAMVAParser {
         FieldKey.federalVehicleCode: "DCH",
         FieldKey.driverLicenseName: "DAA",
         FieldKey.givenName: "DCT",
+        FieldKey.underEighteenUntilDate: "DDH",
+        FieldKey.underNineteenUntilDate: "DDI",
+        FieldKey.underTwentyOneUntilDate: "DDJ",
     ]
-
 
     /// The raw data from an AAMVA specification adhering to the PDF-417 barcode standard.
     final let data: String

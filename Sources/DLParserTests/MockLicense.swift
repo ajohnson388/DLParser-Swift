@@ -65,6 +65,9 @@ struct MockLicenseFactory {
         license.jurisdictionVehicleDescription = "JVD"
         license.jurisdictionRestrictionDescription = "JRD"
         license.jurisdictionEndorsementDescription = "JED"
+        license.underEighteenUtilDate = makeDate("11111117", dateFormat)
+        license.underNineteenUtilDate = makeDate("11111118", dateFormat)
+        license.underTwentyOneUtilDate = makeDate("11111119", dateFormat)
         return license
     }
     
@@ -92,6 +95,9 @@ struct MockLicenseFactory {
         license.hazmatExpirationDate = nil
         license.isTemporaryDocument = nil
         license.isVeteran = nil
+        license.underEighteenUtilDate = nil
+        license.underNineteenUtilDate = nil
+        license.underTwentyOneUtilDate = nil
         return license
     }
     
@@ -112,6 +118,9 @@ struct MockLicenseFactory {
         license.isTemporaryDocument = nil
         license.isOrganDonor = nil
         license.isVeteran = nil
+        license.underEighteenUtilDate = nil
+        license.underNineteenUtilDate = nil
+        license.underTwentyOneUtilDate = nil
         return license
     }
     
@@ -129,6 +138,9 @@ struct MockLicenseFactory {
         license.isTemporaryDocument = nil
         license.isOrganDonor = nil
         license.isVeteran = nil
+        license.underEighteenUtilDate = nil
+        license.underNineteenUtilDate = nil
+        license.underTwentyOneUtilDate = nil
         return license
     }
     
@@ -175,6 +187,13 @@ struct MockLicenseFactory {
     static var versionNineLicense: DriverLicense {
         var license = makeBaseLicense()
         license.version = 9
+        license.federalVehicleCode = nil
+        return license
+    }
+
+    static var versionTenLicense: DriverLicense {
+        var license = makeBaseLicense()
+        license.version = 10
         license.federalVehicleCode = nil
         return license
     }

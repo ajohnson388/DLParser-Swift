@@ -18,8 +18,5 @@ final class VersionTenParser: AAMVAParser {
         fields[FieldKey.federalVehicleCode] = nil
         fields[FieldKey.driverLicenseName] = nil
         fields[FieldKey.givenName] = nil
-        fields[FieldKey.underEighteenUntilDate] = "DDH"
-        fields[FieldKey.underNineteenUntilDate] = "DDI"
-        fields[FieldKey.underTwentyOneUntilDate] = "DDJ"
     }
 }
