@@ -13,12 +13,11 @@ jobs:
         uses: maxim-lobanov/setup-cocoapods@v1
         with:
           podfile-path: Podfile.lock
-
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
       - name: Run unit tests
         run: >
-          xcodebuild test
+          xcodebuild clean test
           -workspace 'DLParser.xcworkspace'
           -scheme 'DLParser'
           -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2'
