@@ -148,6 +148,7 @@ public class AAMVAParser {
         case 5:  return VersionFiveFieldParser(data: data)
         case 8:  return VersionEightFieldParser(data: data)
         case 9:  return VersionNineParser(data: data)
+        case 10: return VersionTenParser(data: data)
         default: return defaultParser
         }
     }

@@ -1,0 +1,21 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          podfile-path: DLParser-Swift/Podfile.lock
+      - name: Run unit tests
+        run: >
+          xcodebuild test
+          -workspace 'DLParser.xcworkspace'
+          -scheme 'DLParser'
+          -destination 'platform=iOS Simulator,name=iPhone X,OS=12.4'
