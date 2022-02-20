@@ -13,7 +13,7 @@ import GoogleMobileVision
 import DLParser
 
 /// The delegate for presenting results from the `ScannerPresenter`.
-protocol ScannerPresenterDelegate: class {
+protocol ScannerPresenterDelegate: AnyObject {
     
     /// Called when a valid driver license barcode is detected in the video camera.
     ///
