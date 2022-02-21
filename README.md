@@ -21,7 +21,7 @@ supports all AAMVA versions and AAMVA defined fields.
 
 - iOS 12.0+
 - Swift 5.1
-- Xcode 11
+- Xcode 13.2.1
 - Cocoapods
 
 ## Cocoapod Installation
