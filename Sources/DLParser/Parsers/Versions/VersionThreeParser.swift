@@ -29,5 +29,8 @@ final class VersionThreeFieldParser: AAMVAParser {
         fields[FieldKey.isOrganDonor] = nil
         fields[FieldKey.isVeteran] = nil
         fields[FieldKey.driverLicenseName] = nil
+        fields[FieldKey.underEighteenUntilDate] = nil
+        fields[FieldKey.underNineteenUntilDate] = nil
+        fields[FieldKey.underTwentyOneUntilDate] = nil
     }
 }

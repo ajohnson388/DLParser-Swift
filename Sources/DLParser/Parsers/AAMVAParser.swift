@@ -74,8 +74,10 @@ public class AAMVAParser {
         FieldKey.federalVehicleCode: "DCH",
         FieldKey.driverLicenseName: "DAA",
         FieldKey.givenName: "DCT",
+        FieldKey.underEighteenUntilDate: "DDH",
+        FieldKey.underNineteenUntilDate: "DDI",
+        FieldKey.underTwentyOneUntilDate: "DDJ",
     ]
-
 
     /// The raw data from an AAMVA specification adhering to the PDF-417 barcode standard.
     final let data: String
@@ -146,6 +148,7 @@ public class AAMVAParser {
         case 5:  return VersionFiveFieldParser(data: data)
         case 8:  return VersionEightFieldParser(data: data)
         case 9:  return VersionNineParser(data: data)
+        case 10: return VersionTenParser(data: data)
         default: return defaultParser
         }
     }
@@ -190,6 +193,9 @@ public class AAMVAParser {
         license.birthdate = parser.parseDate(key: FieldKey.birthDate)
         license.hazmatExpirationDate = parser.parseDate(key: FieldKey.hazmatExpirationDate)
         license.revisionDate = parser.parseDate(key: FieldKey.revisionDate)
+        license.underEighteenUtilDate = parseDate(key: FieldKey.underEighteenUntilDate)
+        license.underNineteenUtilDate = parseDate(key: FieldKey.underNineteenUntilDate)
+        license.underTwentyOneUtilDate = parseDate(key: FieldKey.underTwentyOneUntilDate)
         license.race = parser.parseCategory(key: FieldKey.race)
         license.gender = parser.parseCategory(key: FieldKey.gender)
         license.eyeColor = parser.parseCategory(key: FieldKey.eyeColor)

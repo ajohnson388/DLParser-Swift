@@ -30,7 +30,7 @@ DEPENDENCIES:
   - GoogleMobileVision (~> 1.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - GoogleMobileVision
     - GoogleToolboxForMac
     - GTMSessionFetcher
@@ -44,4 +44,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d5827eee17bff7f18eaf16b2b7bdea07a5cc8bee
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.11.2
