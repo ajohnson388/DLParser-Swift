@@ -227,9 +227,9 @@ extension DriverLicense {
     }
     
     /**
-        Determines if the license holder is 18 or older.
+        Determines if the license holder is a juvenile (under 18).
      
-        Returns: True if the license holder is 18 or older.
+        Returns: True if the license holder is a juvenile (under 18).
      */
     public var isJuvenile: Bool {
         var component = DateComponents()
@@ -240,6 +240,6 @@ extension DriverLicense {
         let calculatedDate = Calendar.current.date(byAdding: component, to: Date()) else {
             return true
         }
-        return calculatedDate >= birthDate
+        return calculatedDate < birthDate
     }
 }
