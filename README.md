@@ -17,17 +17,17 @@ supports all AAMVA versions and AAMVA defined fields.
 - [x] Offline use
 - [x] Unit tests for version parsers
 
-## Requirements
+## Example Requirements
 
-- iOS 12.0+
-- Swift 5.1
-- Xcode 13.2.1
+- iOS 15.6+
+- Swift 5.0
+- Xcode 16.4
 - Cocoapods
 
 ## Cocoapod Installation
 
 ```ruby
-pod 'DLParser', '~> 3.1.0'
+pod 'DLParser', '~> 3.1.1'
 ```
 
 ## Carthage Installation
@@ -40,7 +40,7 @@ github "ajohnson388/DLParser-Swift"
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ajohnson388/DLParser-Swift.git", from: "3.1.0")
+    .package(url: "https://github.com/ajohnson388/DLParser-Swift.git", from: "3.1.1")
 ]
 ```
 

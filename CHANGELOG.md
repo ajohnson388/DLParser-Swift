@@ -2,6 +2,15 @@
 
 Changes are welcomed by everyone. Please review the contributing section in the [README](README.md).
 
+## 3.1.1 - June 30, 2025
+
+### Codebase improvements
+* Updated and fixed the DLParser example
+* Updated GitHub action workflows
+
+### Bug fixes
+* Fixed the `isJuvenile` conditional property
+
 ## 3.1.0 - February 20, 2022
 
 ### Codebase improvements
