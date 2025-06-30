@@ -22,4 +22,4 @@ jobs:
           xcodebuild clean test
           -workspace 'DLParser.xcworkspace'
           -scheme 'DLParser'
-          -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.2'
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.5'

@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-pod-spec:
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
     - uses: actions/checkout@v1
     - name: Publish pod spec
