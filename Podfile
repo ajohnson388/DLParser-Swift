@@ -5,6 +5,6 @@ target 'DLParserTests' do
 end
   
 target 'DLParser Example' do
-  pod 'GoogleMobileVision', '~> 1.2'
+  pod 'GoogleMLKit/BarcodeScanning', '8.0.0'
   project 'DLParser Example/DLParser Example.xcodeproj'
 end

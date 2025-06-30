@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 import AVFoundation
-import GoogleMobileVision
+import MLKitBarcodeScanning
+import MLKitVision
 import DLParser
 
 /// The delegate for presenting results from the `ScannerPresenter`.
@@ -30,9 +31,10 @@ final class ScannerPresenter: NSObject {
     
     /// The handle on the video camera.
     let videoSession = AVCaptureSession()
-    
-    private lazy var barCodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode,
-                                                   options: nil)
+
+    private lazy var barcodeScanner: BarcodeScanner = BarcodeScanner.barcodeScanner(
+        options: BarcodeScannerOptions(formats: .PDF417)
+    )
     
 
     // MARK: - Lifecycle
@@ -50,7 +52,9 @@ final class ScannerPresenter: NSObject {
     ///
     /// - Parameter isStarting: True, if the video camera should be active.
     func startVideo(_ isStarting: Bool) {
-        isStarting ? videoSession.startRunning() : videoSession.stopRunning()
+        DispatchQueue.global().async { [weak self] in
+            isStarting ? self?.videoSession.startRunning() : self?.videoSession.stopRunning()
+        }
     }
     
     
@@ -106,25 +110,6 @@ final class ScannerPresenter: NSObject {
         }
         return nil
     }
-    
-    private func findDriverLicense(inImage image: UIImage) {
-        let orientation = GMVUtility.imageOrientation(from: UIDevice.current.orientation,
-                                                      with: AVCaptureDevice.Position.back,
-                                                      defaultDeviceOrientation: UIDevice.current.orientation)
-        let barcodeOptions = [NSNumber(value: 6): orientation]
-        let features = barCodeDetector?.features(in: image, options: barcodeOptions) ?? []
-        
-        guard features.count > 0 else {
-            return
-        }
-        
-        let barcodes = features.compactMap { $0 as? GMVBarcodeFeature }
-        let licenses = barcodes.map { AAMVAParser(data: $0.rawValue).parse() }
-        guard let license = licenses.first(where: { $0.isAcceptable }) else {
-            return
-        }
-        delegate?.didFindDriverLicense(license)
-    }
 }
 
 
@@ -135,9 +120,22 @@ extension ScannerPresenter: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput,
                        didOutput sampleBuffer: CMSampleBuffer,
                        from connection: AVCaptureConnection) {
-        guard let image = GMVUtility.sampleBufferTo32RGBA(sampleBuffer) else {
-            return
+        let visionImage = VisionImage(buffer: sampleBuffer)
+        barcodeScanner.process(visionImage) { [weak self] barcodes, error in
+            guard error == nil, let barcodes = barcodes, !barcodes.isEmpty else {
+                return
+            }
+
+            for barcode in barcodes {
+                guard let rawValue = barcode.rawValue else {
+                    continue
+                }
+                let license = AAMVAParser(data: rawValue).parse()
+                if license.isAcceptable {
+                    self?.delegate?.didFindDriverLicense(license)
+                    break
+                }
+            }
         }
-        findDriverLicense(inImage: image)
     }
 }

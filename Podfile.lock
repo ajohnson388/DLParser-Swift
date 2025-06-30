@@ -1,47 +1,81 @@
 PODS:
-  - GoogleMobileVision (1.6.0):
-    - GoogleMobileVision/BarcodeDetector (= 1.6.0)
-    - GoogleMobileVision/Detector (= 1.6.0)
-    - GoogleMobileVision/FaceDetector (= 1.6.0)
-    - GoogleMobileVision/LabelDetector (= 1.6.0)
-    - GoogleMobileVision/TextDetector (= 1.6.0)
-  - GoogleMobileVision/BarcodeDetector (1.6.0):
-    - GoogleMobileVision/Detector (~> 1.6)
-  - GoogleMobileVision/Detector (1.6.0):
-    - GoogleToolboxForMac/Logger (~> 2.1)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.1)
-  - GoogleMobileVision/FaceDetector (1.6.0):
-    - GoogleMobileVision/Detector (~> 1.6)
-  - GoogleMobileVision/LabelDetector (1.6.0):
-    - GoogleMobileVision/Detector (~> 1.6)
-  - GoogleMobileVision/TextDetector (1.6.0):
-    - GoogleMobileVision/Detector (~> 1.6)
-  - GoogleToolboxForMac/Defines (2.2.1)
-  - GoogleToolboxForMac/Logger (2.2.1):
-    - GoogleToolboxForMac/Defines (= 2.2.1)
-  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
-    - GoogleToolboxForMac/Defines (= 2.2.1)
-  - GTMSessionFetcher/Core (1.2.2)
-  - Protobuf (3.8.0)
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleMLKit/BarcodeScanning (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 7.0.0)
+  - GoogleMLKit/MLKitCore (8.0.0):
+    - MLKitCommon (~> 13.0.0)
+  - GoogleToolboxForMac/Defines (4.2.1)
+  - GoogleToolboxForMac/Logger (4.2.1):
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (4.2.1)":
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - GoogleUtilities/Environment (8.1.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.1.0)
+  - GoogleUtilities/UserDefaults (8.1.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMSessionFetcher/Core (3.5.0)
+  - MLImage (1.0.0-beta7)
+  - MLKitBarcodeScanning (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitCommon (13.0.0):
+    - GoogleDataTransport (~> 10.0)
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GoogleUtilities/Logger (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+  - MLKitVision (9.0.0):
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+    - MLImage (= 1.0.0-beta7)
+    - MLKitCommon (~> 13.0)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
+  - PromisesObjC (2.4.0)
 
 DEPENDENCIES:
-  - GoogleMobileVision (~> 1.2)
+  - GoogleMLKit/BarcodeScanning (= 8.0.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - GoogleMobileVision
+  trunk:
+    - GoogleDataTransport
+    - GoogleMLKit
     - GoogleToolboxForMac
+    - GoogleUtilities
     - GTMSessionFetcher
-    - Protobuf
+    - MLImage
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
+    - nanopb
+    - PromisesObjC
 
 SPEC CHECKSUMS:
-  GoogleMobileVision: 31cfb4319fd0c03d80105680abd9eae9da5e3b47
-  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
-  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
-  Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleMLKit: ddd51d7dff36ff28defa69afedd9cdce684fd857
+  GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
+  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
+  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
+  MLImage: 2ab9c968e75f57911c16f4c9d9e8a8e9604a86a1
+  MLKitBarcodeScanning: 72c6437f13a900833b400136be53a8a5d86f42fa
+  MLKitCommon: 26b779f072a182c1603d4c88a101c350cac837b1
+  MLKitVision: fa8dea9012ac59497c79ddbe9ebf32051047ac4c
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
 
-PODFILE CHECKSUM: d5827eee17bff7f18eaf16b2b7bdea07a5cc8bee
+PODFILE CHECKSUM: ba3c2d04c1ca0b7f081b92c09d032269d689c0d2
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.16.2

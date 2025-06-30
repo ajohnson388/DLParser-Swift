@@ -78,5 +78,15 @@ extension ScannerViewController: ScannerPresenterDelegate {
         let output = String(describing: license).replacingOccurrences(of: ", ", with: "\n")
         playFeedback()
         print(output)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.presenter.startVideo(true)
+        }
+        let alert = UIAlertController(
+            title: "License detected",
+            message: output,
+            preferredStyle: .alert
+        )
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
