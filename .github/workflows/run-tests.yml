@@ -5,7 +5,7 @@ on: [push]
 jobs:
   test:
     name: Run Tests
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: pod install
       - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
+        run: sudo xcode-select -switch /Applications/Xcode_16.4.app
       - name: Run unit tests
         run: >
           xcodebuild clean test
