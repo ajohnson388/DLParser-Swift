@@ -43,6 +43,7 @@
 		858EAB01208D149A00713305 /* VersionSixParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE5208D149A00713305 /* VersionSixParser.swift */; };
 		858EAB02208D149A00713305 /* VersionThreeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE6208D149A00713305 /* VersionThreeParser.swift */; };
 		858EAB03208D149A00713305 /* VersionTwoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EAAE7208D149A00713305 /* VersionTwoParser.swift */; };
+		8C38F3302E135E830046D83D /* VersionElevenParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38F32F2E135E830046D83D /* VersionElevenParser.swift */; };
 		F2DBEDC45A1E3655AD620B8D /* libPods-DLParserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24AFC098DA20E017A4A4ABA /* libPods-DLParserTests.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		858EAAE5208D149A00713305 /* VersionSixParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSixParser.swift; sourceTree = "<group>"; };
 		858EAAE6208D149A00713305 /* VersionThreeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionThreeParser.swift; sourceTree = "<group>"; };
 		858EAAE7208D149A00713305 /* VersionTwoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionTwoParser.swift; sourceTree = "<group>"; };
+		8C38F32F2E135E830046D83D /* VersionElevenParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionElevenParser.swift; sourceTree = "<group>"; };
 		B24AFC098DA20E017A4A4ABA /* libPods-DLParserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLParserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -245,6 +247,7 @@
 				858EAADF208D149A00713305 /* VersionEightParser.swift */,
 				858EAAE2208D149A00713305 /* VersionNineParser.swift */,
 				42CAFDA527BF31A600C583E2 /* VersionTenParser.swift */,
+				8C38F32F2E135E830046D83D /* VersionElevenParser.swift */,
 			);
 			path = Versions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				858EAAFD208D149A00713305 /* VersionFourParser.swift in Sources */,
 				858EAAF0208D149A00713305 /* Character+Conversion.swift in Sources */,
 				4271947921D98C9E00774CA1 /* StringRepresentable.swift in Sources */,
+				8C38F3302E135E830046D83D /* VersionElevenParser.swift in Sources */,
 				858EAAF9208D149A00713305 /* Truncation.swift in Sources */,
 				858EAAF3208D149A00713305 /* Substring+Conversion.swift in Sources */,
 				858EAAF7208D149A00713305 /* IssuingCountry.swift in Sources */,

@@ -149,6 +149,7 @@ public class AAMVAParser {
         case 8:  return VersionEightFieldParser(data: data)
         case 9:  return VersionNineParser(data: data)
         case 10: return VersionTenParser(data: data)
+        case 11: return VersionElevenParser(data: data)
         default: return defaultParser
         }
     }
@@ -217,6 +218,10 @@ public class AAMVAParser {
         license.isOrganDonor = parser.parseBoolean(key: FieldKey.isOrganDonor)
         license.isVeteran = parser.parseBoolean(key: FieldKey.isVeteran)
         license.isTemporaryDocument = parser.parseBoolean(key: FieldKey.isTemporaryDocument)
+        license.isCommercial = parser.parseBoolean(key: FieldKey.isCommercial)
+        license.isNonDomiciled = parser.parseBoolean(key: FieldKey.isNonDomiciled)
+        license.isEnhancedCredential = parser.parseBoolean(key: FieldKey.isEnhancedCredential)
+        license.isPermit = parser.parseBoolean(key: FieldKey.isPermit)
         license.federalVehicleCode = parser.parseString(key: FieldKey.federalVehicleCode)
         license.standardVehicleClass = parser.parseString(key: FieldKey.standardVehicleCode)
         license.standardRestrictionCode = parser.parseString(key: FieldKey.standardRestrictionCode)
@@ -243,6 +248,7 @@ public class AAMVAParser {
         // Check for field by searching for the beginning carriage return or the beginning of the DL subfile
         return NSRegularExpression.firstMatch(pattern: "\n\(identifier)(.*?)\\n", data: data)
             ?? NSRegularExpression.firstMatch(pattern: "DL\(identifier)(.*?)\\n", data: data)
+            ?? NSRegularExpression.firstMatch(pattern: "ID\(identifier)(.*?)\\n", data: data)
     }
     
     func parseDouble(key: FieldKey) -> Double? {

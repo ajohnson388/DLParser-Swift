@@ -9,7 +9,7 @@ import Foundation
 
 /**
     A driver license model for the information described in the AAMVA PDF417 standards. This model
-    only captures the subfile 'DL' from the PDF417 data.
+    captures 'DL' and 'ID' subfiles from the PDF417 data.
  */
 public struct DriverLicense: Equatable {
     
@@ -149,7 +149,19 @@ public struct DriverLicense: Equatable {
     
     /// The license holder's temporary document status, if any.
     public var isTemporaryDocument: Bool?
-    
+
+    /// The license holder's CDL status, if any.
+    public var isCommercial: Bool?
+
+    /// The license holder's non-domiciled status, if any. Only present if the CDL status is present.
+    public var isNonDomiciled: Bool?
+
+    /// The license holder's temporary document status, if any.
+    public var isEnhancedCredential: Bool?
+
+    /// The license holder's permit status, if any.
+    public var isPermit: Bool?
+
     
     // MARK: - Codes
     

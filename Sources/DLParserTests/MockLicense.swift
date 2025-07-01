@@ -197,4 +197,20 @@ struct MockLicenseFactory {
         license.federalVehicleCode = nil
         return license
     }
+
+    static var versionElevenLicense: DriverLicense {
+        var license = makeBaseLicense()
+        license.version = 11
+        license.federalVehicleCode = nil
+        license.givenNameAlias = nil
+        license.lastNameAlias = nil
+        license.suffixAlias = nil
+        license.hazmatExpirationDate = nil
+        license.race = nil
+        license.isCommercial = true
+        license.isNonDomiciled = true
+        license.isEnhancedCredential = true
+        license.isPermit = true
+        return license
+    }
 }

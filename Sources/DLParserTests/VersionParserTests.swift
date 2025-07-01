@@ -60,6 +60,14 @@ final class VersionParserTests: XCTestCase {
     }
 
     func testVersionTenParser() {
-        testVersionParser(mockLicense: MockLicenseFactory.versionNineLicense, licenseDataString: "@\n\u{1e}\rANSI 123456090201DL00000511DLDCN11\nDCO12\nDCLW\nDCM22\nDCJauditInformation\nDCK123456\nDCIplaceOfBirth\nDCF12345678912345678912\nDCGUSA\nDCD8\nDCE2\nDCB9\nDCA10\nDCU5TH\nDCRJRD\nDCSlastName\nDCPJVD\nDCQJED\nDBNlastNameAlias\nDBA11111112\nDBC1\nDBB11111114\nDBD11111113\nDBGgivenNameAlias\nDBSsuffixAlias\nDADmiddleName, middleName\nDAGstreetAddress\nDACfirstName\nDAHstreetAddressTwo\nDAIcity\nDAJstate\nDAK12345\nDAU052\nDAW44\nDAQ12345678\nDAX44\nDAYBRO\nDAZBLK\nDDK1\nDDL0\nDDC11111115\nDDB11111116\nDDAM\nDDGN\nDDFT\nDDEN\nDDD0\nDDH11111117\nDDI11111118\nDDJ11111119\n\r")
+        testVersionParser(mockLicense: MockLicenseFactory.versionTenLicense, licenseDataString: "@\n\u{1e}\rANSI 123456100201DL00000511DLDCN11\nDCO12\nDCLW\nDCM22\nDCJauditInformation\nDCK123456\nDCIplaceOfBirth\nDCF12345678912345678912\nDCGUSA\nDCD8\nDCE2\nDCB9\nDCA10\nDCU5TH\nDCRJRD\nDCSlastName\nDCPJVD\nDCQJED\nDBNlastNameAlias\nDBA11111112\nDBC1\nDBB11111114\nDBD11111113\nDBGgivenNameAlias\nDBSsuffixAlias\nDADmiddleName, middleName\nDAGstreetAddress\nDACfirstName\nDAHstreetAddressTwo\nDAIcity\nDAJstate\nDAK12345\nDAU052\nDAW44\nDAQ12345678\nDAX44\nDAYBRO\nDAZBLK\nDDK1\nDDL0\nDDC11111115\nDDB11111116\nDDAM\nDDGN\nDDFT\nDDEN\nDDD0\nDDH11111117\nDDI11111118\nDDJ11111119\n\r")
+    }
+
+    func testVersionElevenParser() {
+        testVersionParser(mockLicense: MockLicenseFactory.versionElevenLicense, licenseDataString: "@\n\u{1e}\rANSI 123456110201DL00000511DLDCN11\nDCO12\nDCLW\nDCM22\nDCJauditInformation\nDCK123456\nDCIplaceOfBirth\nDCF12345678912345678912\nDCGUSA\nDCD8\nDCE2\nDCB9\nDCA10\nDCU5TH\nDCRJRD\nDCSlastName\nDCPJVD\nDCQJED\nDBNlastNameAlias\nDBA11111112\nDBC1\nDBB11111114\nDBD11111113\nDBGgivenNameAlias\nDBSsuffixAlias\nDADmiddleName, middleName\nDAGstreetAddress\nDACfirstName\nDAHstreetAddressTwo\nDAIcity\nDAJstate\nDAK12345\nDAU052\nDAW44\nDAQ12345678\nDAX44\nDAYBRO\nDAZBLK\nDDK1\nDDL0 \nDDM1\nDDN1\nDDO1\nDDP1\nDDC11111115\nDDB11111116\nDDAM\nDDGN\nDDFT\nDDEN\nDDD0\nDDH11111117\nDDI11111118\nDDJ11111119\n\r")
+    }
+
+    func testParserWithIdSubfile() {
+        testVersionParser(mockLicense: MockLicenseFactory.versionTenLicense, licenseDataString: "@\n\u{1e}\rANSI 123456100201ID00000511IDDCN11\nDCO12\nDCLW\nDCM22\nDCJauditInformation\nDCK123456\nDCIplaceOfBirth\nDCF12345678912345678912\nDCGUSA\nDCD8\nDCE2\nDCB9\nDCA10\nDCU5TH\nDCRJRD\nDCSlastName\nDCPJVD\nDCQJED\nDBNlastNameAlias\nDBA11111112\nDBC1\nDBB11111114\nDBD11111113\nDBGgivenNameAlias\nDBSsuffixAlias\nDADmiddleName, middleName\nDAGstreetAddress\nDACfirstName\nDAHstreetAddressTwo\nDAIcity\nDAJstate\nDAK12345\nDAU052\nDAW44\nDAQ12345678\nDAX44\nDAYBRO\nDAZBLK\nDDK1\nDDL0\nDDC11111115\nDDB11111116\nDDAM\nDDGN\nDDFT\nDDEN\nDDD0\nDDH11111117\nDDI11111118\nDDJ11111119\n\r")
     }
 }

@@ -11,7 +11,7 @@ supports all AAMVA versions and AAMVA defined fields.
 
 ## Features
 
-- [x] Support for all AAMVA standards (v1-10)
+- [x] Support for all AAMVA standards (v1-11)
 - [x] Support for all AAMVA fields
 - [x] License model for all AAMVA fields
 - [x] Offline use
@@ -27,7 +27,7 @@ supports all AAMVA versions and AAMVA defined fields.
 ## Cocoapod Installation
 
 ```ruby
-pod 'DLParser', '~> 3.1.1'
+pod 'DLParser', '~> 3.2.0'
 ```
 
 ## Carthage Installation
@@ -40,7 +40,7 @@ github "ajohnson388/DLParser-Swift"
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ajohnson388/DLParser-Swift.git", from: "3.1.1")
+    .package(url: "https://github.com/ajohnson388/DLParser-Swift.git", from: "3.2.0")
 ]
 ```
 

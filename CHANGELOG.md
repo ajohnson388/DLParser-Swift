@@ -2,6 +2,28 @@
 
 Changes are welcomed by everyone. Please review the contributing section in the [README](README.md).
 
+## 3.2.0 - June 30, 2025
+
+### Codebase improvements
+* Updated unit test for version 10 parser. It was actually testing against the version 9 mock, however, version 10 and 9 are identical so there was no impact on the test
+* Added test for ID subfile type
+* Added test for version 11 parser
+
+### Features
+* Added support for version 11 parser (2020)
+* Added support for 4 new AAMVA fields: `CDL indicator`, `Non-domiciled indicator`, `Enhanced credential indicator`, `Permit indicator`
+* Added support for `ID` subfile type
+
+### Bug fixes
+* Fixed a crash when parsing height from the version 1 standard.
+
+### Codebase improvements
+* Updated and fixed the DLParser example
+* Updated GitHub action workflows
+
+### Bug fixes
+* Fixed the `isJuvenile` conditional property
+
 ## 3.1.1 - June 30, 2025
 
 ### Codebase improvements

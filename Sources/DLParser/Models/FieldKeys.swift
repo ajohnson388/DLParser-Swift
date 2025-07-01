@@ -76,7 +76,11 @@ public enum FieldKey: String, Equatable {
     case isOrganDonor
     case isVeteran
     case isTemporaryDocument
-    
+    case isCommercial
+    case isNonDomiciled
+    case isEnhancedCredential
+    case isPermit
+
     case federalVehicleCode
     case federalCommercialVehicleCode
     
